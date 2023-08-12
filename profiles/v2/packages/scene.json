@@ -1,0 +1,103 @@
+{
+  "gizmos-infos": {
+    "is2D": true,
+    "is3DIcon": false,
+    "iconSize": 2,
+    "gridVisible": true,
+    "gridColor": [
+      150,
+      150,
+      150,
+      255
+    ],
+    "isIconGizmo3D": false,
+    "iconGizmoSize": 2,
+    "isGridVisible": true,
+    "transformToolName": "position",
+    "pivot": "pivot",
+    "coordinate": "local"
+  },
+  "camera-infos": {
+    "b59e0761-ea04-4a78-b7c0-1672219c7f18": {
+      "position": {
+        "x": 596.5388792040119,
+        "y": 571.238064459109,
+        "z": 1841.7495204035058
+      },
+      "rotation": {
+        "x": -0.04279298870594037,
+        "y": 0.018676820852422765,
+        "z": 0.0008596069648442245,
+        "w": 0.9989090036416359
+      },
+      "viewCenter": {
+        "x": 512.0649488053378,
+        "y": 377.23320905947827,
+        "z": -416.7669141531692
+      }
+    },
+    "f46876e4-e81b-4931-b493-6d367be385e7": {
+      "position": {
+        "x": 0,
+        "y": 0,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    }
+  },
+  "camera-uuids": [
+    "f46876e4-e81b-4931-b493-6d367be385e7"
+  ],
+  "__version__": "1.0.0",
+  "camera": {
+    "fov": 45,
+    "far": 10000,
+    "near": 0.01,
+    "color": [
+      48,
+      48,
+      48,
+      255
+    ],
+    "wheelSpeed": 0.01,
+    "wanderSpeed": 10,
+    "enableAcceleration": true,
+    "far2D": 10000,
+    "near2D": 1,
+    "wheelSpeed2D": 6,
+    "size": "__default_design__",
+    "iso": 0,
+    "aperture": 19,
+    "shutter": 7
+  },
+  "builder": {},
+  "": {
+    "sculpt_brush_rotate": 0
+  },
+  "snap-configs": {
+    "position": {
+      "x": 1,
+      "y": 1,
+      "z": 1
+    },
+    "rotation": 1,
+    "scale": 1,
+    "isPositionSnapEnabled": false,
+    "isRotationSnapEnabled": false,
+    "isScaleSnapEnabled": false
+  },
+  "rect-snap-configs": {
+    "enableSnapping": true,
+    "snapThreshold": 4
+  }
+}
