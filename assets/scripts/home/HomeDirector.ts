@@ -9,7 +9,7 @@ export class HomeDirector extends Component {
         //
     }
 
-    start () {
+    start() {
         // this.scroll.on(Node.EventType.SIZE_CHANGED, this.sizeChanged, this);
     }
 
@@ -18,7 +18,7 @@ export class HomeDirector extends Component {
     }
 
 
-    update (deltaTime: number) {
+    update(deltaTime: number) {
         // [4]
     }
 }
