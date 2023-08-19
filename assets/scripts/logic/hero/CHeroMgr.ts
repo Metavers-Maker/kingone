@@ -1,15 +1,15 @@
 
 /**
- * res manager ,use load res / prefab
+ * hero mgr use manager hero
 */
 
-export class ResMgr {
+export class CHeroMgr {
 
-    public static m_inst: ResMgr | null = null;
+    public static m_inst: CHeroMgr | null = null;
 
     static inst() {
         if (this.m_inst === null) {
-            this.m_inst = new ResMgr();
+            this.m_inst = new CHeroMgr();
         }
         return this.m_inst;
     }
@@ -17,6 +17,8 @@ export class ResMgr {
     public init() {
         //
     }
+
+
 
 }
 

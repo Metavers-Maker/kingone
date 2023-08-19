@@ -1,4 +1,8 @@
 
+/**
+ *  tbl server, use read ,parse tbl data
+*/
+
 export class TblServer {
 
     public static m_inst: TblServer | null = null;
