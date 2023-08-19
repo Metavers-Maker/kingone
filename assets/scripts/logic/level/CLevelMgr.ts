@@ -1,5 +1,7 @@
 
 import { _decorator, Component, Node } from "cc";
+import { CResMgr } from "../ResMgr";
+import { CBatUnit } from "../battle/CBatUnit";
 
 /**
  * level manager use level ctrl / boss ctrl
@@ -50,12 +52,28 @@ export class CLevelMgr {
 
     //发送BOSS
     public emitBoss() {
-
+        let boss_resurl = "";
+        let boss_node = CResMgr.inst().createNode(boss_resurl);
+        if (boss_node) {
+            let t_batunit = boss_node.addComponent("CBatUnit") as CBatUnit;
+            if (t_batunit) {
+                t_batunit.create();
+            }
+        }
+        return boss_node;
     }
 
     //发送普通的怪物
     public emitNormal() {
-
+        let nor_resurl = "";
+        let nor_node = CResMgr.inst().createNode(nor_resurl);
+        if (nor_node) {
+            let t_batunit = nor_node.addComponent("CBatUnit") as CBatUnit;
+            if (t_batunit) {
+                t_batunit.create();
+            }
+        }
+        return nor_node;
     }
 
     //通关
