@@ -14,18 +14,27 @@ export class CLevelMgr {
         return this.m_inst;
     }
 
-    //
-    public m_chapter:number = 1;
+    //big level
+    public m_chapter: number = 1;
 
+    //small level
     public m_level: number = 1;
 
+    //game progress (if m_progress equal = 5 is boss battle)
+    public m_progress: number = 1;
+
     public init() {
-        //
+        //load level data from tbl
     }
 
     //
     public battleBoss() {
-        
+
+    }
+
+    //
+    public battleProgress() {
+
     }
 
 }

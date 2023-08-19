@@ -5,4 +5,4 @@ if [[ ! -f "./tabtoy" ]]; then
      exit 1
 fi
 
-./tabtoy -mode=v3 -index=Index.xlsx -json_out=table_gen.json
+./tabtoy -mode=v3 -index=Index.xlsx -json_out=../assets/resources/data/datatbl.json
