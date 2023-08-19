@@ -3,19 +3,19 @@
  * hero mgr use manager hero
 */
 
-export class CHeroMgr {
+export class CPetMgr {
 
-    public static m_inst: CHeroMgr | null = null;
+    public static m_inst: CPetMgr | null = null;
 
     static inst() {
         if (this.m_inst === null) {
-            this.m_inst = new CHeroMgr();
+            this.m_inst = new CPetMgr();
         }
         return this.m_inst;
     }
 
     public init() {
-        //access tbl init all hero info
+        //access tbl init all pet info
     }
 
 
