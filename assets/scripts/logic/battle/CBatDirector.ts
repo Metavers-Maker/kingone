@@ -1,6 +1,8 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
 import { BatStatus } from "../../base/CDef";
 import { CLevelMgr } from "../level/CLevelMgr";
+import { CHeroMgr } from "../hero/CHeroMgr";
+import { CPetMgr } from "../pet/CPetMgr";
 const { ccclass, property } = _decorator;
 
 @ccclass("CBatDirector")
@@ -20,6 +22,11 @@ export class CBatDirector extends Component {
     }
 
     protected start(): void {
+        //创建英雄
+        CHeroMgr.inst().battleStart(this.node);
+        //创建宠物
+        CPetMgr.inst().battleStart(this.node);
+        //开始关卡运行逻辑
         CLevelMgr.inst().battleStart(this.node);
     }
 

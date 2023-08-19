@@ -1,10 +1,12 @@
 
 /**
- * hero mgr use manager hero
+ * pet mgr use manager pet
 */
 
+import { _decorator, Component, Node } from "cc";
 import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
+import { CPet } from "./CPet";
 
 export class CPetMgr {
 
@@ -19,6 +21,16 @@ export class CPetMgr {
 
     public init() {
         //access tbl init all pet info
+    }
+
+    public m_cur_pet: CPet | null = null;
+
+    public battleStart(msgNode: Node) {
+        // this.m_msg_node = msgNode;
+    }
+
+    public battleEnd() {
+        // this.m_msg_node = msgNode;
     }
 
     //发射宠物

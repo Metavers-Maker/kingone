@@ -3,8 +3,10 @@
  * hero mgr use manager hero
 */
 
+import { _decorator, Component, Node } from "cc";
 import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
+import { CHero } from "./CHero";
 
 export class CHeroMgr {
 
@@ -21,7 +23,17 @@ export class CHeroMgr {
         //access tbl init all hero info
     }
 
-    //发射宠物
+    public m_cur_hero: Node | null = null;
+
+    public battleStart(msgNode: Node) {
+        // this.m_msg_node = msgNode;
+    }
+
+    public battleEnd() {
+        // this.m_msg_node = msgNode;
+    }
+
+    //发射英雄
     public emitHero() {
         let hero_resurl = "";
         let hero_node = CResMgr.inst().createNode(hero_resurl);
