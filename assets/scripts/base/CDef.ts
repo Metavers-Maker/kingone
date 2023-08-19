@@ -17,4 +17,9 @@ export enum EquipType {
     E_EQUIP_DEF = 2,
 }
 
-
+export enum BatStatus {
+    E_BAT_NOR = 0,  //普通战斗
+    E_BAT_BOSS = 1, //BOSS战斗
+    E_BAT_RUN = 2,  //间隔
+    E_BAT_OVER = 3,  //角色死亡
+}
