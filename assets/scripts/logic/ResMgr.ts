@@ -1,4 +1,6 @@
 
+import { _decorator, Component, instantiate, Node, Prefab } from "cc";
+
 /**
  * res manager ,use load res / prefab
 */
@@ -53,6 +55,15 @@ export class CResMgr {
         if (this.m_callback && this.m_target) {
             this.m_callback(this.m_target, 100);
         }
+    }
+
+    public createNode(resurl: string): Node | null {
+        let t_prefab: Prefab | null = null;
+        if (t_prefab) {
+            let ret = instantiate(t_prefab);
+            return ret;
+        }
+        return null;
     }
 
 }

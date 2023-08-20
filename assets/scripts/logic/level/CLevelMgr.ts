@@ -1,4 +1,8 @@
 
+import { _decorator, Component, Node } from "cc";
+import { CResMgr } from "../ResMgr";
+import { CBatUnit } from "../battle/CBatUnit";
+
 /**
  * level manager use level ctrl / boss ctrl
 */
@@ -27,14 +31,73 @@ export class CLevelMgr {
         //load level data from tbl
     }
 
-    //
-    public battleBoss() {
+    public m_msg_node: Node | null = null;
 
+    public battleStart(msgNode: Node) {
+        this.m_msg_node = msgNode;
     }
 
-    //
-    public battleProgress() {
+    public battleEnd() {
+        this.m_msg_node = null;
+    }
 
+    //发兵
+    public emitMonster() {
+        if (this.m_progress >= 5) {
+            this.emitBoss();
+        } else {
+            this.emitNormal();
+        }
+    }
+
+    //发送BOSS
+    public emitBoss() {
+        let boss_resurl = "";
+        let boss_node = CResMgr.inst().createNode(boss_resurl);
+        if (boss_node) {
+            let t_batunit = boss_node.addComponent("CBatUnit") as CBatUnit;
+            if (t_batunit) {
+                t_batunit.create();
+            }
+        }
+        return boss_node;
+    }
+
+    //发送普通的怪物
+    public emitNormal() {
+        let nor_resurl = "";
+        let nor_node = CResMgr.inst().createNode(nor_resurl);
+        if (nor_node) {
+            let t_batunit = nor_node.addComponent("CBatUnit") as CBatUnit;
+            if (t_batunit) {
+                t_batunit.create();
+            }
+        }
+        return nor_node;
+    }
+
+    //通关
+    public pass() {
+        //
+        if (this.m_progress === 5) {
+            //进度完成
+            if (this.m_level === 10) {
+                //章节增加
+                this.m_chapter += 1;
+                this.m_level = 1;
+                this.m_progress = 1;
+            } else {
+                //小节提升
+                this.m_level += 1;
+                this.m_progress = 1;
+            }
+        } else {
+            this.m_progress = 1;
+        }
+        //发送战斗间歇动画
+        if (this.m_msg_node) {
+            this.m_msg_node.emit("MSG_BAT_RUN");
+        }
     }
 
 }
