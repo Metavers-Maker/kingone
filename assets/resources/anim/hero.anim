@@ -53,7 +53,7 @@
   },
   {
     "__type__": "cc.animation.HierarchyPath",
-    "path": "hero/adventurer-run-00"
+    "path": "adventurer-run-00"
   },
   {
     "__type__": "cc.animation.ComponentPath",
