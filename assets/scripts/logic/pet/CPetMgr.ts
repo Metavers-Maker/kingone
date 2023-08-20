@@ -7,6 +7,7 @@ import { _decorator, Component, Node } from "cc";
 import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
 import { CPet } from "./CPet";
+import { CBatWar } from "../battle/CBatWar";
 
 export class CPetMgr {
 
@@ -25,8 +26,11 @@ export class CPetMgr {
 
     public m_cur_pet: CPet | null = null;
 
+    public m_msg_node: Node | null = null;
+    // public m_cur_hero: Node | null = null;
+
     public battleStart(msgNode: Node) {
-        // this.m_msg_node = msgNode;
+        this.m_msg_node = msgNode;
     }
 
     public battleEnd() {
@@ -42,6 +46,8 @@ export class CPetMgr {
             if (t_batunit) {
                 t_batunit.create();
             }
+            //
+            CBatWar._self?.node.emit("MSG_PET_BIRTH", pet_node);
         }
         return pet_node;
     }
