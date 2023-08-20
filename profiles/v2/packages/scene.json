@@ -863,10 +863,64 @@
         "y": 0,
         "z": 0
       }
+    },
+    "2bTHdKDepGE73navRhyiN+": {
+      "position": {
+        "x": 692,
+        "y": 507,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "2338pFhwRK7Y2hlzk6yJ7I": {
+      "position": {
+        "x": 692,
+        "y": 507,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "a4RfSdV9REmLpZ/Om60IIw": {
+      "position": {
+        "x": 692,
+        "y": 507,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "b59e0761-ea04-4a78-b7c0-1672219c7f18"
+    "a4RfSdV9REmLpZ/Om60IIw"
   ],
   "__version__": "1.0.0",
   "camera": {
