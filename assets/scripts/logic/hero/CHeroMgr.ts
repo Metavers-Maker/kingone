@@ -7,6 +7,7 @@ import { _decorator, Component, Node } from "cc";
 import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
 import { CHero } from "./CHero";
+import { CBatWar } from "../battle/CBatWar";
 
 export class CHeroMgr {
 
@@ -23,30 +24,50 @@ export class CHeroMgr {
         //access tbl init all hero info
     }
 
+    public m_msg_node: Node | null = null;
     public m_cur_hero: Node | null = null;
 
     public battleStart(msgNode: Node) {
-        // this.m_msg_node = msgNode;
+        this.m_msg_node = msgNode;
+        this.m_cur_hero = this.emitHero("prefab/hero");
+        if (this.m_cur_hero) {
+            // Bat
+        }
     }
 
     public battleEnd() {
         // this.m_msg_node = msgNode;
+        if (this.m_cur_hero) {
+            this.m_cur_hero.removeFromParent();
+            this.m_cur_hero.destroy();
+            this.m_cur_hero = null;
+        }
+        this.m_msg_node = null;
     }
 
     //发射英雄
-    public emitHero() {
-        let hero_resurl = "";
+    public emitHero(prefabstr: string) {
+        //last hero remove
+        if (this.m_cur_hero) {
+            this.m_cur_hero.removeFromParent();
+            this.m_cur_hero.destroy();
+            this.m_cur_hero = null;
+        }
+        //
+        let hero_resurl = prefabstr
         let hero_node = CResMgr.inst().createNode(hero_resurl);
         if (hero_node) {
             let t_batunit = hero_node.addComponent("CBatUnit") as CBatUnit;
             if (t_batunit) {
                 t_batunit.create();
             }
+            //
+            CBatWar._self?.node.emit("MSG_HERO_BIRTH", hero_node);
         }
         return hero_node;
     }
 
-
+    //!class end
 
 }
 
