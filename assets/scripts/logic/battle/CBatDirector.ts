@@ -48,7 +48,7 @@ export class CBatDirector extends Component {
             }
         } else if (this.m_bat_status === BatStatus.E_BAT_NOR) {
             // 战斗中
-
+            CLevelMgr.inst().update(dt);
         }
     }
 }

@@ -2,6 +2,8 @@
 import { _decorator, Component, Node } from "cc";
 import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
+import { CBossCtrl } from "./CBossCtrl";
+import { CMonsterCtrl } from "./CMonsterCtrl";
 
 /**
  * level manager use level ctrl / boss ctrl
@@ -17,6 +19,10 @@ export class CLevelMgr {
         }
         return this.m_inst;
     }
+
+    public m_boss_ctrl: CBossCtrl = new CBossCtrl();
+
+    public m_monster_ctrl: CMonsterCtrl = new CMonsterCtrl();
 
     //big level
     public m_chapter: number = 1;
@@ -44,36 +50,12 @@ export class CLevelMgr {
     //发兵
     public emitMonster() {
         if (this.m_progress >= 5) {
-            this.emitBoss();
+            this.m_boss_ctrl.start("Prefab/boss/boss0");
+            // this.emitBoss("Prefab/boss/boss0");
         } else {
-            this.emitNormal();
+            this.m_monster_ctrl.start(null);
+            // this.emitNormal("Prefab/monster/monster0");
         }
-    }
-
-    //发送BOSS
-    public emitBoss() {
-        let boss_resurl = "";
-        let boss_node = CResMgr.inst().createNode(boss_resurl);
-        if (boss_node) {
-            let t_batunit = boss_node.addComponent("CBatUnit") as CBatUnit;
-            if (t_batunit) {
-                t_batunit.create();
-            }
-        }
-        return boss_node;
-    }
-
-    //发送普通的怪物
-    public emitNormal() {
-        let nor_resurl = "";
-        let nor_node = CResMgr.inst().createNode(nor_resurl);
-        if (nor_node) {
-            let t_batunit = nor_node.addComponent("CBatUnit") as CBatUnit;
-            if (t_batunit) {
-                t_batunit.create();
-            }
-        }
-        return nor_node;
     }
 
     //通关
@@ -98,6 +80,13 @@ export class CLevelMgr {
         if (this.m_msg_node) {
             this.m_msg_node.emit("MSG_BAT_RUN");
         }
+    }
+
+    //
+    public update(dt: number) {
+        //
+        this.m_boss_ctrl.update(dt);
+        this.m_monster_ctrl.update(dt);
     }
 
 }
