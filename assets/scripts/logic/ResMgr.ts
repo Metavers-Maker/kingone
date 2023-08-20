@@ -1,5 +1,5 @@
 
-import { _decorator, Component, instantiate, Node, Prefab } from "cc";
+import { _decorator, Component, instantiate, Node, Prefab, resources } from "cc";
 
 /**
  * res manager ,use load res / prefab
@@ -16,6 +16,8 @@ export class CResMgr {
         return this.m_inst;
     }
 
+    public m_prefabs: Map<string, Prefab> = new Map();
+
     protected m_callback: Function | null = null;
     protected m_target: any = null;
 
@@ -26,15 +28,25 @@ export class CResMgr {
     }
 
     public loadRes() {
-        //
         this.loadHero();
     }
 
     public loadHero() {
-        if (this.m_callback && this.m_target) {
-            this.m_callback(this.m_target, 10);
-        }
-        this.loadEquip();
+        //
+        resources.loadDir("prefab/hero", (err, datas: Prefab[]) => {
+            //
+            console.log("loadHero", datas);
+            datas.forEach((item: Prefab) => {
+                let name = "prefab/hero/" + item.name;
+                this.m_prefabs.set(name, item);
+            });
+            //
+            if (this.m_callback && this.m_target) {
+                this.m_callback(this.m_target, 10);
+            }
+            this.loadEquip();
+        });
+
     }
 
     public loadEquip() {
@@ -58,7 +70,7 @@ export class CResMgr {
     }
 
     public createNode(resurl: string): Node | null {
-        let t_prefab: Prefab | null = null;
+        let t_prefab = this.m_prefabs.get(resurl);
         if (t_prefab) {
             let ret = instantiate(t_prefab);
             return ret;

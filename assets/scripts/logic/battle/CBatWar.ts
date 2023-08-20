@@ -7,12 +7,14 @@ export class CBatWar extends Component {
     public static _self: CBatWar | null = null;
 
     protected onLoad(): void {
+        console.log("CBatWar onLoad");
         CBatWar._self = this;
+        this.node.on("MSG_HERO_BIRTH", this.onHeroBirth, this);
+        this.node.on("MSG_PET_BIRTH", this.onPetBirth, this);
     }
 
     protected start(): void {
-        this.node.on("MSG_HERO_BIRTH", this.onHeroBirth, this);
-        this.node.on("MSG_PET_BIRTH", this.onPetBirth, this);
+        console.log("CBatWar start");
     }
 
     protected onDestroy(): void {

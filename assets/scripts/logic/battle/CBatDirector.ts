@@ -18,10 +18,12 @@ export class CBatDirector extends Component {
     public m_bat_run_time: number = 2.0;
 
     protected onLoad(): void {
+        console.log("CBatDirector onLoad");
         CBatDirector._self = this;
     }
 
     protected start(): void {
+        console.log("CBatDirector start");
         //创建英雄
         CHeroMgr.inst().battleStart(this.node);
         //创建宠物
