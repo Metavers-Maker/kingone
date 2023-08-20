@@ -29,8 +29,7 @@ export class CBatBullet extends Component {
     }
 
     protected onDestroy(): void {
-        //
-        console.log("CBatBullet destroy", this.node.uuid);
+        // console.log("CBatBullet destroy", this.node.uuid);
     }
 
     protected update(dt: number): void {
@@ -55,7 +54,7 @@ export class CBatBullet extends Component {
         this.m_cur_pos.x = this.m_cur_pos.x + this.m_dir.x * t_dis;
         this.m_cur_pos.y = this.m_cur_pos.y + this.m_dir.y * t_dis;
         this.node.setPosition(this.m_cur_pos);
-        console.log("bullet pos", this.m_cur_pos, t_dis, this.m_dir);
+        // console.log("bullet pos", this.m_cur_pos, t_dis, this.m_dir);
         //
         this.isOutRange();
     }

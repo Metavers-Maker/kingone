@@ -2,6 +2,7 @@
 import { _decorator, Component, Node } from "cc";
 import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
+import { CBatWar } from "../battle/CBatWar";
 
 /**
  * level manager use level ctrl / boss ctrl
@@ -25,6 +26,7 @@ export class CBossCtrl {
             if (t_batunit) {
                 t_batunit.create();
             }
+            CBatWar._self?.node.emit("MSG_BOSS_BIRTH", boss_node);
         }
         return boss_node;
     }

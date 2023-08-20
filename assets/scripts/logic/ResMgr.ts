@@ -59,7 +59,39 @@ export class CResMgr {
         if (this.m_callback && this.m_target) {
             this.m_callback(this.m_target, 30);
         }
-        this.loadLevel();
+        this.loadBoss();
+    }
+
+    public loadBoss() {
+        //
+        let res_dir = "prefab/boss";
+        resources.loadDir(res_dir, (err, datas: Prefab[]) => {
+            datas.forEach((item: Prefab) => {
+                let name = res_dir + '/' + item.name;
+                this.m_prefabs.set(name, item);
+            });
+            console.log("loadBoss", this.m_prefabs);
+            if (this.m_callback && this.m_target) {
+                this.m_callback(this.m_target, 40);
+            }
+            this.loadMonster();
+        });
+    }
+
+    public loadMonster() {
+        //
+        let res_dir = "prefab/monster";
+        resources.loadDir(res_dir, (err, datas: Prefab[]) => {
+            datas.forEach((item: Prefab) => {
+                let name = res_dir + '/' + item.name;
+                this.m_prefabs.set(name, item);
+            });
+            console.log("loadMonster", this.m_prefabs);
+            if (this.m_callback && this.m_target) {
+                this.m_callback(this.m_target, 50);
+            }
+            this.loadLevel();
+        });
     }
 
     public loadLevel() {

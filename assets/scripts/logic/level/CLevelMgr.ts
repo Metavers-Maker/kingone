@@ -56,6 +56,7 @@ export class CLevelMgr {
             this.m_monster_ctrl.start(null);
             // this.emitNormal("Prefab/monster/monster0");
         }
+        console.log("CLevelMgr emitMonster");
     }
 
     //通关
