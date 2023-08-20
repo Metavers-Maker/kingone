@@ -33,14 +33,13 @@ export class CResMgr {
 
     public loadHero() {
         //
-        resources.loadDir("prefab/hero", (err, datas: Prefab[]) => {
-            //
-            console.log("loadHero", datas);
+        let res_dir = "prefab/hero";
+        resources.loadDir(res_dir, (err, datas: Prefab[]) => {
             datas.forEach((item: Prefab) => {
-                let name = "prefab/hero/" + item.name;
+                let name = res_dir + '/' + item.name;
                 this.m_prefabs.set(name, item);
             });
-            //
+            console.log("loadHero", this.m_prefabs);
             if (this.m_callback && this.m_target) {
                 this.m_callback(this.m_target, 10);
             }
@@ -58,15 +57,39 @@ export class CResMgr {
 
     public loadPet() {
         if (this.m_callback && this.m_target) {
-            this.m_callback(this.m_target, 80);
+            this.m_callback(this.m_target, 30);
         }
         this.loadLevel();
     }
 
     public loadLevel() {
         if (this.m_callback && this.m_target) {
-            this.m_callback(this.m_target, 100);
+            this.m_callback(this.m_target, 80);
         }
+        this.loadUI();
+    }
+
+    public loadUI() {
+        if (this.m_callback && this.m_target) {
+            this.m_callback(this.m_target, 90);
+        }
+        this.loadBullet();
+    }
+
+    public loadBullet() {
+        //
+        let res_dir = "prefab/bullet";
+        resources.loadDir(res_dir, (err, datas: Prefab[]) => {
+            console.log("loadBullet", datas);
+            datas.forEach((item: Prefab) => {
+                let name = res_dir + '/' + item.name;
+                this.m_prefabs.set(name, item);
+            });
+            if (this.m_callback && this.m_target) {
+                this.m_callback(this.m_target, 100);
+            }
+        });
+
     }
 
     public createNode(resurl: string): Node | null {

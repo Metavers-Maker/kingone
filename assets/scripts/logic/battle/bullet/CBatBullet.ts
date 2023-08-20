@@ -2,7 +2,7 @@ import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "
 import { BatBulletMode } from "../../../base/CDef";
 const { ccclass, property } = _decorator;
 
-@ccclass("CBatMonster1")
+@ccclass("CBatBullet")
 export class CBatBullet extends Component {
 
     public m_bullet_mode: BatBulletMode = BatBulletMode.E_BULLET_MODE_DIR;
@@ -28,7 +28,7 @@ export class CBatBullet extends Component {
     }
 
     protected onDestroy(): void {
-
+        //
     }
 
     protected update(dt: number): void {
