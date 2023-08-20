@@ -23,3 +23,8 @@ export enum BatStatus {
     E_BAT_RUN = 2,  //间隔
     E_BAT_OVER = 3,  //角色死亡
 }
+
+export enum BatBulletMode {
+    E_BULLET_MODE_DIR = 0,  //方向性子弹
+    E_BULLET_MODE_TARGET = 1, //目标性子弹
+}
