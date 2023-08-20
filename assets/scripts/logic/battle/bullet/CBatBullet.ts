@@ -7,6 +7,8 @@ export class CBatBullet extends Component {
 
     public m_bullet_mode: BatBulletMode = BatBulletMode.E_BULLET_MODE_DIR;
 
+    public m_src: Node | null = null;
+
     public m_target: Node | null = null;
 
     public m_dir: Vec3 = new Vec3(1.0, 0.0, 0.0);
@@ -15,7 +17,8 @@ export class CBatBullet extends Component {
 
     public m_cur_pos: Vec3 = new Vec3(1.0, 0.0, 0.0);
 
-    public init(_mode: BatBulletMode, startPos: Vec3) {
+    public init(_src: Node, _mode: BatBulletMode, startPos: Vec3) {
+        this.m_src = _src;
         this.m_bullet_mode = _mode;
         this.m_cur_pos = startPos;
     }
