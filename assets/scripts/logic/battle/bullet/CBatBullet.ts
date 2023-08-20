@@ -11,12 +11,13 @@ export class CBatBullet extends Component {
 
     public m_dir: Vec3 = new Vec3(1.0, 0.0, 0.0);
 
-    public m_speed: number = 50;
+    public m_speed: number = 100;
 
     public m_cur_pos: Vec3 = new Vec3(1.0, 0.0, 0.0);
 
-    public init(_mode: BatBulletMode) {
+    public init(_mode: BatBulletMode, startPos: Vec3) {
         this.m_bullet_mode = _mode;
+        this.m_cur_pos = startPos;
     }
 
     protected onLoad(): void {
@@ -24,7 +25,7 @@ export class CBatBullet extends Component {
     }
 
     protected start(): void {
-
+        this.node.setPosition(this.m_cur_pos);
     }
 
     protected onDestroy(): void {
@@ -32,8 +33,6 @@ export class CBatBullet extends Component {
     }
 
     protected update(dt: number): void {
-
-        this.m_cur_pos = this.node.getPosition();
         //bullet fly dis
         let t_dis = this.m_speed * dt;
         if (this.m_bullet_mode === BatBulletMode.E_BULLET_MODE_DIR) {

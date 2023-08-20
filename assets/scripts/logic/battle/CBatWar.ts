@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera, UITransform } from "cc";
 const { ccclass, property } = _decorator;
 
 @ccclass("CBatWar")
@@ -40,7 +40,12 @@ export class CBatWar extends Component {
         }
     }
 
-
+    public getWarPos(wpos: Vec3, out: Vec3) {
+        let trans = this.node.getComponent(UITransform);
+        if (trans) {
+            trans.convertToNodeSpaceAR(wpos, out);
+        }
+    }
 
     protected update(dt: number): void {
     }

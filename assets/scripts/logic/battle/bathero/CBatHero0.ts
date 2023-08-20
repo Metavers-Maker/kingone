@@ -11,7 +11,7 @@ export class CBatHero0 extends Component {
 
     public m_acc_time: number = 0;
 
-    public m_fire_dert: number = 5;
+    public m_fire_dert: number = 1;
 
     protected onLoad(): void {
 
@@ -43,7 +43,9 @@ export class CBatHero0 extends Component {
         if (bulletNode) {
             let bullet: CBatBullet = bulletNode.addComponent("CBatBullet") as CBatBullet;
             if (bullet) {
-                bullet.init(BatBulletMode.E_BULLET_MODE_DIR);
+                let warPos = new Vec3();
+                CBatWar._self?.getWarPos(this.node.getWorldPosition(), warPos);
+                bullet.init(BatBulletMode.E_BULLET_MODE_DIR, warPos);
                 // bullet.m_dir.set(1.0, 0.0, 0.0);
             }
             CBatWar._self?.node.addChild(bulletNode);
