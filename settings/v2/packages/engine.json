@@ -131,5 +131,8 @@
       "value": false,
       "version": ""
     }
+  },
+  "macroConfig": {
+    "BATCHER2D_MEM_INCREMENT": 240
   }
 }
