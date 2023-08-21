@@ -8,6 +8,7 @@ const { ccclass, property } = _decorator;
 @ccclass("CBatUnit")
 export class CBatUnit extends Component {
 
+    public m_atk_range: number = 150;
     public m_atk: number = 0;
     public m_def: number = 0;
     public m_hp: number = 0;

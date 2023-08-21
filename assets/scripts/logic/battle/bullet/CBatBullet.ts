@@ -13,14 +13,15 @@ export class CBatBullet extends Component {
 
     public m_dir: Vec3 = new Vec3(1.0, 0.0, 0.0);
 
-    public m_speed: number = 100;
+    public m_speed: number = 200;
 
     public m_cur_pos: Vec3 = new Vec3(1.0, 0.0, 0.0);
 
-    public init(_src: Node, _mode: BatBulletMode, startPos: Vec3) {
+    public init(_src: Node, _mode: BatBulletMode, startPos: Vec3, _target: Node | null = null) {
         this.m_src = _src;
         this.m_bullet_mode = _mode;
         this.m_cur_pos = startPos;
+        this.m_target = _target;
     }
 
     protected onLoad(): void {
