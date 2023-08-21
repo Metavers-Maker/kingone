@@ -20,8 +20,8 @@
   "camera-infos": {
     "b59e0761-ea04-4a78-b7c0-1672219c7f18": {
       "position": {
-        "x": 692,
-        "y": 507,
+        "x": 893.0589999999999,
+        "y": 488.99999999999994,
         "z": 5000
       },
       "rotation": {
@@ -38,8 +38,8 @@
     },
     "f46876e4-e81b-4931-b493-6d367be385e7": {
       "position": {
-        "x": 656.5,
-        "y": 491.49999999999994,
+        "x": -10,
+        "y": 10,
         "z": 5000
       },
       "rotation": {
@@ -110,8 +110,8 @@
     },
     "9a1c0236-69f2-4aeb-b82b-53d8f986c629": {
       "position": {
-        "x": 204.7799709263985,
-        "y": 444.20182309654876,
+        "x": 205.7799709263985,
+        "y": 445.20182309654876,
         "z": 5000
       },
       "rotation": {
@@ -792,10 +792,10 @@
         "z": 0
       }
     },
-    "90XelhE0JD/YO6iAHXN5u0": {
+    "deWgcnV8FCpKUHLQhmQ8TG": {
       "position": {
-        "x": 692,
-        "y": 312,
+        "x": 708.7431971206536,
+        "y": 964.5153406669003,
         "z": 5000
       },
       "rotation": {
@@ -810,10 +810,10 @@
         "z": 0
       }
     },
-    "67k9No/1BJuaB9UB5n7Dzm": {
+    "69r/t1vDJCvoTAIfSz1AVo": {
       "position": {
-        "x": 692,
-        "y": 312,
+        "x": 320,
+        "y": 511,
         "z": 5000
       },
       "rotation": {
@@ -828,82 +828,10 @@
         "z": 0
       }
     },
-    "c7DEXPO41HNIehX56T0BCG": {
+    "41oCCq2ixPLpjt3Rfj3vLU": {
       "position": {
-        "x": 692,
-        "y": 312,
-        "z": 5000
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "viewCenter": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      }
-    },
-    "1cikR1p25BB7wgRamccrWZ": {
-      "position": {
-        "x": 692,
-        "y": 312,
-        "z": 5000
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "viewCenter": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      }
-    },
-    "2bTHdKDepGE73navRhyiN+": {
-      "position": {
-        "x": 692,
-        "y": 507,
-        "z": 5000
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "viewCenter": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      }
-    },
-    "2338pFhwRK7Y2hlzk6yJ7I": {
-      "position": {
-        "x": 692,
-        "y": 507,
-        "z": 5000
-      },
-      "rotation": {
-        "x": 0,
-        "y": 0,
-        "z": 0,
-        "w": 1
-      },
-      "viewCenter": {
-        "x": 0,
-        "y": 0,
-        "z": 0
-      }
-    },
-    "a4RfSdV9REmLpZ/Om60IIw": {
-      "position": {
-        "x": 692,
-        "y": 507,
+        "x": 320,
+        "y": 511,
         "z": 5000
       },
       "rotation": {
@@ -920,7 +848,7 @@
     }
   },
   "camera-uuids": [
-    "a4RfSdV9REmLpZ/Om60IIw"
+    "41oCCq2ixPLpjt3Rfj3vLU"
   ],
   "__version__": "1.0.0",
   "camera": {
