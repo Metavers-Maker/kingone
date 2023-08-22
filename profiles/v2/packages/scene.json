@@ -20,8 +20,8 @@
   "camera-infos": {
     "b59e0761-ea04-4a78-b7c0-1672219c7f18": {
       "position": {
-        "x": 411.4148308239802,
-        "y": 343.0850855951444,
+        "x": 391.96339805725677,
+        "y": 636.0077980206436,
         "z": 5000
       },
       "rotation": {
@@ -1259,10 +1259,334 @@
         "y": 0,
         "z": 0
       }
+    },
+    "d69n7ADi1FlqoiXPoVt4hF": {
+      "position": {
+        "x": 676.0000000000001,
+        "y": 449.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "4a6m/wKe1NEpQivTUZ7WLd": {
+      "position": {
+        "x": 676.0000000000001,
+        "y": 449.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "c1Dizdt0RPmahpaQ2Plb2b": {
+      "position": {
+        "x": -101.41273328383772,
+        "y": 534.2735689407723,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "48znUE8UdFE5OlPj1Qnb8A": {
+      "position": {
+        "x": 676,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "bdua6uB/dNVK2wHtWE83xR": {
+      "position": {
+        "x": 320,
+        "y": 480.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "6cVubUfUlO2bmaAA4UX4Bw": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "11SEQgnYtJfKYITfx597Eq": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "18ffWdtGFDNa6wuVDamDlS": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "60ri98S1lPwL/YcUN9y/i7": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "1bbHybBPhPooKXeD/Kt3Ug": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "abB6i5+jNALaHkBXhlipGM": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "0eJeGp2MxEGo0UcFFDwn5Q": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "56dCIqUY1Jv7vWLTXg5ULW": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "0bA6aGP6pKH7N5Y5dXDdZb": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "dadiSY1qtBtp7cDEvnuZ4W": {
+      "position": {
+        "x": 320,
+        "y": 480,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "72zFH9sFdLk6qMAnmFqLV0": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "18IguwQ+dD8ae0M2CcHXDq": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "76FCUmjqZNOLERASOaEUGr": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "b59e0761-ea04-4a78-b7c0-1672219c7f18"
+    "76FCUmjqZNOLERASOaEUGr"
   ],
   "__version__": "1.0.0",
   "camera": {
