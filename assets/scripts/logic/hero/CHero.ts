@@ -7,5 +7,6 @@ export class CHero {
     public m_unlock: boolean = false;
     public m_qulity: HeroQuality = HeroQuality.E_HERO_QUA_BASE;
     public m_res: Prefab | null = null;
+    public m_hero_level: number = 1;
 }
 
