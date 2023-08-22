@@ -1583,10 +1583,82 @@
         "y": 0,
         "z": 0
       }
+    },
+    "b4q0Q1JfZG0qx42fuYZBXY": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "d4qmOFsqJK2qqA3LeIwqzh": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "f3QKP6b4pE+of/XhNZrURq": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "c6447OR+pIXYdF6IuMHNx/": {
+      "position": {
+        "x": 677,
+        "y": 274.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "76FCUmjqZNOLERASOaEUGr"
+    "c6447OR+pIXYdF6IuMHNx/"
   ],
   "__version__": "1.0.0",
   "camera": {
