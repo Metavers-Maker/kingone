@@ -22,7 +22,7 @@ export class CMonsterCtrl {
     }
 
     public start(monsterData: any) {
-        this.emit("prefab/monster/monster0");
+        this.emit("prefab/monster/golem1");
     }
 
     //选择一个最近的怪物
