@@ -1439,10 +1439,28 @@
         "y": 0,
         "z": 0
       }
+    },
+    "69snIB2KpMSoHbyKIgdbME": {
+      "position": {
+        "x": 931.6756915023027,
+        "y": 833.2671572006118,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "b59e0761-ea04-4a78-b7c0-1672219c7f18"
+    "69snIB2KpMSoHbyKIgdbME"
   ],
   "__version__": "1.0.0",
   "camera": {

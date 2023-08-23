@@ -7,6 +7,7 @@ export class MainMenu extends Component {
     public contentLayout:Node |null= null
     @property(Prefab)
     public heroLayout:Prefab |null= null
+    private heroNode:Node |null= null;
 
     protected onLoad(): void {
         
@@ -21,9 +22,15 @@ export class MainMenu extends Component {
     }
 
     clickHero(){
-        if(this.contentLayout&&this.heroLayout){
-            let layout = instantiate(this.heroLayout) as Node;
-            this.contentLayout.addChild(layout);
+        if(this.heroNode){
+            this.heroNode.removeFromParent();
+            this.heroNode.destroy();
+            this.heroNode= null;
+        }else{
+            if(this.contentLayout&&this.heroLayout){
+                this.heroNode = instantiate(this.heroLayout) as Node;
+                this.contentLayout.addChild(this.heroNode );
+            }
         }
     }
 }
