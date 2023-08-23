@@ -17,18 +17,29 @@ export class CMonsterCtrl {
 
     public m_max_num: number = 6;
 
-    // public m_emit_dert: number = 0.2;
-
-    // public m_acc_time: number = 0;
-
     public init() {
         //load level data from tbl
     }
 
     public start(monsterData: any) {
-        this.emit("prefab/monster/monster0");
+        this.emit("prefab/monster/golem1");
     }
 
+    //选择一个最近的怪物
+    public selectOneMonster(_atk_range: number, _srcx: number): Node | null {
+        let t_target: Node | null = null;
+        let t_last_dis = 100000000;
+        for (let i = 0; i < this.m_monsterNods.length; i++) {
+            let t_dis = Math.abs(this.m_monsterNods[i].position.x - _srcx);
+            if (t_dis < t_last_dis) {
+                t_last_dis = t_dis;
+                t_target = this.m_monsterNods[i];
+            }
+        }
+        return t_target;
+    }
+
+    //
     public clearMonster() {
         for (let i = 0; i < this.m_monsterNods.length; i++) {
             this.m_monsterNods[i].removeFromParent();
