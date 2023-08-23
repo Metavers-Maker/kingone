@@ -3586,7 +3586,7 @@
         "__id__": 219
       }
     ],
-    "_active": true,
+    "_active": false,
     "_components": [
       {
         "__id__": 455
@@ -9694,6 +9694,8 @@
       "__id__": 0
     },
     "fileId": "8664k7qEtODJp6adiPNC5y",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
@@ -10277,6 +10279,8 @@
       "__id__": 0
     },
     "fileId": "d3PleLSqlE/pHFHo+Libxp",
+    "instance": null,
+    "targetOverrides": null,
     "nestedPrefabInstanceRoots": null
   },
   {
