@@ -28,7 +28,7 @@ export class CBatWar extends Component {
 
     public onHeroBirth(target: Node) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slot0");
+            let t_slot_node = this.node.getChildByPath("slothero");
             if (t_slot_node) {
                 // t_slot_node.addChild(target);
                 target.setPosition(t_slot_node.position);
@@ -37,24 +37,29 @@ export class CBatWar extends Component {
         }
     }
 
-    public onPetBirth(target: Node) {
+    public onPetBirth(target: Node, index: number) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slot1");
+            let pet_pos = "slot" + index;
+            let t_slot_node = this.node.getChildByPath(pet_pos);
             if (t_slot_node) {
                 t_slot_node.addChild(target);
             }
         }
     }
 
-    public onMonsterBirth(target: Node) {
+    public onMonsterBirth(target: Node, index: number) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slot2");
+            let t_slot_node = this.node.getChildByPath("slotmonster");
             if (t_slot_node) {
                 let t_rand_x = Math.random() * 200;
                 let t_rand_y = Math.random() * 100;
                 target.setPosition(t_slot_node.position.x + t_rand_x, t_slot_node.position.y + t_rand_y, t_slot_node.position.z)
                 this.node.addChild(target)
             }
+            //
+            // this.node.children.sort((a: Node, b: Node) => {
+
+            // });
         }
     }
 

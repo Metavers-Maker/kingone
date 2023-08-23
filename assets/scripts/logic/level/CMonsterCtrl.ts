@@ -68,7 +68,7 @@ export class CMonsterCtrl {
                 }
                 //
                 this.m_monsterNods.push(nor_node);
-                CBatWar._self?.node.emit("MSG_MONSTER_BIRTH", nor_node);
+                CBatWar._self?.node.emit("MSG_MONSTER_BIRTH", nor_node, i);
             }
             console.log("CMonsterCtrl emit", nor_node, monsterPrefab, t_emit_num);
         }
