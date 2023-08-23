@@ -2339,10 +2339,64 @@
         "y": 0,
         "z": 0
       }
+    },
+    "01fIjJns1Eu56Q4lPd9Vde": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "f5uL7vSpNHXqV/rlXoCifC": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "fakfewChtJNK+Wtoqstqwq": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "bbWccnWvlBE5Ykmz52h3+A"
+    "fakfewChtJNK+Wtoqstqwq"
   ],
   "__version__": "1.0.0",
   "camera": {
