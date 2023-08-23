@@ -29,7 +29,7 @@ export class CHeroMgr {
 
     public battleStart(msgNode: Node) {
         this.m_msg_node = msgNode;
-        this.m_cur_hero = this.emitHero("prefab/hero/hero0");
+        this.m_cur_hero = this.emitHero("prefab/hero/fallen1");
         if (this.m_cur_hero) {
             // Bat
         }
