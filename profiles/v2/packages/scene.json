@@ -1568,8 +1568,8 @@
     },
     "76FCUmjqZNOLERASOaEUGr": {
       "position": {
-        "x": 677,
-        "y": 274.00000000000006,
+        "x": 746,
+        "y": 358.99999999999994,
         "z": 5000
       },
       "rotation": {
@@ -1799,10 +1799,514 @@
         "y": 0,
         "z": 0
       }
+    },
+    "a8OYurZF5Ie53hx8ZffyfJ": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "3csIygoYtMAJvUMxZqhNQu": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "0arzpUsoJGSbnVyY0RYCFd": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "36YTGSsKlId7HamgppvAgx": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "1eUX1BhIFNFrxfBHX1bOWS": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "0dOIFKrPxIY7LqkIjQgqSL": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "feyOv5jpJNHZErPndm2mhs": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "c2UJGYFONFGZnArF3aSEbJ": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "faCrMbjZFPabD0sh/2fkYc": {
+      "position": {
+        "x": 658.9206684231378,
+        "y": 717.9441512975443,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "8eMmPjAW5Jy4OoT25u/A3b": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "3dxDaV0+FOrJIGehLJT0bX": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "c0iREqa/ZOhJgO7QEyOG5p": {
+      "position": {
+        "x": 677.9999999999999,
+        "y": 551,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "d4FMu7Ek9Pa6URi4Dm1Nql": {
+      "position": {
+        "x": 678,
+        "y": 427.8827838827838,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "04LuysgeNAxIUSiP3dMzbD": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "56c6eP6UdOwIxF/kYDjt2x": {
+      "position": {
+        "x": 633.6321665045642,
+        "y": 502.4915570559736,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "53VlTh4/BPR5gk/yJlhZVp": {
+      "position": {
+        "x": 591.1306792267744,
+        "y": 566.3112768328701,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "14P1XpJfNM/pE5rO4rZDrY": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "2bJJiiFZ1FF5c2+F8dA/dF": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "d8TsaJVxhLSZHjvwF16acZ": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "f4l/3m38pB17ifoht4IMbL": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "87Uld9Zt9CTphrV2DZ47vW": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "79rtPCjC9Ao4HFz2HI1xu/": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "bb9t29AWlPzaMvkmvM0Rdw": {
+      "position": {
+        "x": 553.7006700152676,
+        "y": 470.9810636086306,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "2cbaVYgdZCVa43z+D46Z0w": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "44P237WCFMgJLfXa+cqG38": {
+      "position": {
+        "x": 510.16921454368,
+        "y": 430.89962971229266,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "fb8xpxE7NJ6JNXSDaLCDFf": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "30YcJwT3FICLbgnEzsk3uO": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "74Wmyq4w9LmIGunnLhoxQi": {
+      "position": {
+        "x": 746,
+        "y": 358.99999999999994,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "fddmX22vVAmpBE0rNcOwCR"
+    "74Wmyq4w9LmIGunnLhoxQi"
   ],
   "__version__": "1.0.0",
   "camera": {
