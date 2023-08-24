@@ -28,7 +28,7 @@ export class CBatWar extends Component {
 
     public onHeroBirth(target: Node) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slothero");
+            let t_slot_node = this.node.getChildByPath("slot0");
             if (t_slot_node) {
                 // t_slot_node.addChild(target);
                 target.setPosition(t_slot_node.position);
