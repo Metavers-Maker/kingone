@@ -118,6 +118,23 @@ export class CResMgr {
                 this.m_prefabs.set(name, item);
             });
             if (this.m_callback && this.m_target) {
+                this.m_callback(this.m_target, 95);
+            }
+            this.loadEffect();
+        });
+
+    }
+
+    public loadEffect() {
+        //
+        let res_dir = "prefab/effect";
+        resources.loadDir(res_dir, (err, datas: Prefab[]) => {
+            console.log("loadEffect", datas);
+            datas.forEach((item: Prefab) => {
+                let name = res_dir + '/' + item.name;
+                this.m_prefabs.set(name, item);
+            });
+            if (this.m_callback && this.m_target) {
                 this.m_callback(this.m_target, 100);
             }
         });

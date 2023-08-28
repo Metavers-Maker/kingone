@@ -20,8 +20,8 @@
   "camera-infos": {
     "b59e0761-ea04-4a78-b7c0-1672219c7f18": {
       "position": {
-        "x": 204.2480303164092,
-        "y": 720.4906737646716,
+        "x": 295.596334751016,
+        "y": 833.9073168303496,
         "z": 5000
       },
       "rotation": {
@@ -2771,10 +2771,118 @@
         "y": 0,
         "z": 0
       }
+    },
+    "87HPfIVg1F8pe4e5V6xTxJ": {
+      "position": {
+        "x": 808.4360760195511,
+        "y": 488.1937818166502,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "0bkO3cRNFNKIQlcMNG7G45": {
+      "position": {
+        "x": 745,
+        "y": 481,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "3aDrI3Z6ZKirTnNw1xtJ5h": {
+      "position": {
+        "x": 343.33176017686225,
+        "y": 481.10609337522874,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "32iM59BtRMTZJxL0xwSrsW": {
+      "position": {
+        "x": 745,
+        "y": 315.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "6dO34n1ZxCdruGTqUQRjcJ": {
+      "position": {
+        "x": 745,
+        "y": 315.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "c8wjpFqUFFRLfgdVceOmRj": {
+      "position": {
+        "x": 745,
+        "y": 315.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "b59e0761-ea04-4a78-b7c0-1672219c7f18"
+    "c8wjpFqUFFRLfgdVceOmRj"
   ],
   "__version__": "1.0.0",
   "camera": {

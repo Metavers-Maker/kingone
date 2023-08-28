@@ -22,7 +22,7 @@ export class CKingInst {
     public m_user: CUser = new CUser();
 
     public init() {
-        
+
     }
 
 }

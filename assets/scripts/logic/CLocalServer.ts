@@ -21,7 +21,7 @@ export class CLocalServer {
     }
 
     public saving() {
-        
+
     }
 
     public pasring() {
