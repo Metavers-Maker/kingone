@@ -26,7 +26,7 @@ export class CHurtNum extends Component {
     }
 
     public aniCallback(aniType: Animation.EventType, st: AnimationState) {
-        console.log("aniType", aniType, st);
+        // console.log("aniType", aniType, st);
         if (aniType === Animation.EventType.FINISHED) {
             this.node.removeFromParent();
             this.node.destroy();

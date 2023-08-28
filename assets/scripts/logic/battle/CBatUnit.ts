@@ -4,6 +4,7 @@ import { CBatWar } from "./CBatWar";
 import { CBatDirector } from "./CBatDirector";
 import { CResMgr } from "../ResMgr";
 import { CHurtNum } from "../../effect/CHurtNum";
+import { CKingInst } from "../CKingInst";
 const { ccclass, property } = _decorator;
 /**
  * use for hero ,enemy, boss for base number
@@ -37,6 +38,7 @@ export class CBatUnit extends Component {
     public createByCLS(_chapter: number, _level: number, _step: number) {
         //根据 章节-关卡-进度 初始化batunit
         this.m_hp = _chapter * 1000 + _level * 100 + _step * 10 + 10;
+        this.m_hp = 100;
         this.m_hp_cur = this.m_hp;
     }
 
@@ -44,8 +46,6 @@ export class CBatUnit extends Component {
         this.m_hp_cur = this.m_hp_cur - hurt;
         if (this.m_hp_cur <= 0) {
             //死亡
-            this.node.removeFromParent();
-            this.node.destroy();
             CBatWar._self?.node.emit("MSG_ENT_DEAD", this.node, "monster");
             return true;
         }
