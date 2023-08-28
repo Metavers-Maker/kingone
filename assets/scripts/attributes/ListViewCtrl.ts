@@ -1,4 +1,6 @@
 import { _decorator, Component, Node, ScrollView, Label, Button, Vec3, UITransform, instantiate, error, Vec2 } from "cc";
+import { CPlayer } from "../logic/entity/CPlayer";
+import { HomeDirector } from "../home/HomeDirector";
 const { ccclass, property, menu } = _decorator;
 
 const _temp_vec3 = new Vec3();
@@ -38,7 +40,7 @@ export class ListViewCtrl extends Component {
     update(dt: number) {}
 
     onclickItem(event:any,param:any){
-
+        HomeDirector._self?.node.emit("ADD_ATTRIBUTE_LEVEL",param);
     }
 }
 
