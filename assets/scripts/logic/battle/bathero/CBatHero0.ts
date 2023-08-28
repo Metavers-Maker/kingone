@@ -1,4 +1,4 @@
-import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
+import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera, Animation, log } from "cc";
 import { CResMgr } from "../../ResMgr";
 import { CBatWar } from "../CBatWar";
 import { CBatBullet } from "../bullet/CBatBullet";
@@ -10,6 +10,8 @@ const { ccclass, property } = _decorator;
 @ccclass("CBatHero0")
 export class CBatHero0 extends Component {
 
+    private anim: Animation = null!;
+
     public m_acc_time: number = 0;
 
     public m_fire_dert: number = 1;
@@ -18,10 +20,14 @@ export class CBatHero0 extends Component {
 
     protected onLoad(): void {
         //
+        this.anim = this.node.getComponent(Animation)!;
+        console.log("CBatHero0 onLoad", this.anim);
+        
     }
 
     protected start(): void {
         //
+        this.anim.play('fallen1_die');
     }
 
     protected onDestroy(): void {
