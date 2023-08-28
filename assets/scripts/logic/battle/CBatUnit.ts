@@ -33,7 +33,8 @@ export class CBatUnit extends Component {
 
     public createByCLS(_chapter: number, _level: number, _step: number) {
         //根据 章节-关卡-进度 初始化batunit
-
+        this.m_hp = _chapter * 1000 + _level * 100 + _step * 10 + 10;
+        this.m_hp_cur = this.m_hp;
     }
 
     public decHp(hurt: number) {

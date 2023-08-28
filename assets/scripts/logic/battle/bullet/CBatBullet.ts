@@ -1,6 +1,7 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
 import { BatBulletMode } from "../../../base/CDef";
 import { CBatUnit } from "../CBatUnit";
+import { CBatWar } from "../CBatWar";
 const { ccclass, property } = _decorator;
 
 //normal bullet
@@ -98,6 +99,7 @@ export class CBatBullet extends Component {
             let target_batunit = this.m_target.getComponent("CBatUnit") as CBatUnit;
             if (target_batunit) {
                 target_batunit.onHit(this.m_atk);
+                CBatWar._self?.node.emit("MSG_ENT_HURT", this.m_target);
             }
         }
         //
