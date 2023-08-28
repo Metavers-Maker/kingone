@@ -21,8 +21,8 @@ export class CMonsterCtrl {
         //load level data from tbl
     }
 
-    public start(monsterData: any) {
-        this.emit("prefab/monster/golem1");
+    public start(monsterData: any, _chapter: number, _level: number, _step: number) {
+        this.emit("prefab/monster/golem1", _chapter, _level, _step);
     }
 
     //选择一个最近的怪物
@@ -49,17 +49,16 @@ export class CMonsterCtrl {
     }
 
     //发送普通的怪物
-    public emit(monsterPrefab: string) {
+    public emit(monsterPrefab: string, _chapter: number, _level: number, _step: number) {
         //
         this.clearMonster();
-        //
         let t_emit_num = this.m_min_num + Math.floor(Math.random() * (this.m_max_num - this.m_min_num));
         for (let i = 0; i < t_emit_num; i++) {
             let nor_node = CResMgr.inst().createNode(monsterPrefab);
             if (nor_node) {
                 let t_batunit = nor_node.addComponent("CBatUnit") as CBatUnit;
                 if (t_batunit) {
-                    t_batunit.create();
+                    t_batunit.createByCLS(_chapter, _level, _step);
                 }
                 //
                 let t_batmove = nor_node.addComponent("CBatMonsterMove") as CBatMonsterMove;

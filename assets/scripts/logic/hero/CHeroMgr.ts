@@ -60,7 +60,7 @@ export class CHeroMgr {
         if (hero_node) {
             let t_batunit = hero_node.addComponent("CBatUnit") as CBatUnit;
             if (t_batunit) {
-                t_batunit.create();
+                t_batunit.createByHero();
             }
             //
             CBatWar._self?.node.emit("MSG_HERO_BIRTH", hero_node);
