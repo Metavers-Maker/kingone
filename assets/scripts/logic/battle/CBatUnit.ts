@@ -42,7 +42,7 @@ export class CBatUnit extends Component {
             //死亡
             this.node.removeFromParent();
             this.node.destroy();
-            CBatDirector._self?.node.emit("MSG_ENT_DEAD", this.node);
+            CBatDirector._self?.node.emit("MSG_ENT_DEAD", this.node, "monster");
             return true;
         }
         return false;

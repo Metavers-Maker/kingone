@@ -11,7 +11,7 @@ import { CBatMonsterMove } from "../battle/batmonster/CBatMonsterMove";
 
 export class CMonsterCtrl {
 
-    public m_monsterNods: Node[] = [];
+    public m_monsterNodes: Map<string, Node> = new Map();
 
     public m_min_num: number = 4;
 
@@ -29,23 +29,30 @@ export class CMonsterCtrl {
     public selectOneMonster(_atk_range: number, _srcx: number): Node | null {
         let t_target: Node | null = null;
         let t_last_dis = 100000000;
-        for (let i = 0; i < this.m_monsterNods.length; i++) {
-            let t_dis = Math.abs(this.m_monsterNods[i].position.x - _srcx);
-            if (t_dis < t_last_dis) {
-                t_last_dis = t_dis;
-                t_target = this.m_monsterNods[i];
+        this.m_monsterNodes.forEach((target) => {
+            if (target && target.isValid) {
+                let t_dis = Math.abs(target.position.x - _srcx);
+                if (t_dis < t_last_dis) {
+                    t_last_dis = t_dis;
+                    t_target = target;
+                }
             }
-        }
+        });
         return t_target;
+    }
+
+    public delMonster(uuid: string) {
+        this.m_monsterNodes.delete(uuid);
+        console.log("delMonster", uuid);
     }
 
     //
     public clearMonster() {
-        for (let i = 0; i < this.m_monsterNods.length; i++) {
-            this.m_monsterNods[i].removeFromParent();
-            this.m_monsterNods[i].destroy();
-        }
-        this.m_monsterNods = [];
+        this.m_monsterNodes.forEach((target: Node) => {
+            target.removeFromParent();
+            target.destroy();
+        });
+        this.m_monsterNodes.clear();
     }
 
     //发送普通的怪物
@@ -67,7 +74,7 @@ export class CMonsterCtrl {
                     t_batmove.create(t_batunit ? t_batunit.m_atk_range : 50);
                 }
                 //
-                this.m_monsterNods.push(nor_node);
+                this.m_monsterNodes.set(nor_node.uuid, nor_node);
                 CBatWar._self?.node.emit("MSG_MONSTER_BIRTH", nor_node, i);
             }
             // console.log("CMonsterCtrl emit", nor_node, monsterPrefab, t_emit_num);

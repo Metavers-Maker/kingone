@@ -1,4 +1,5 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera, UITransform } from "cc";
+import { CLevelMgr } from "../level/CLevelMgr";
 const { ccclass, property } = _decorator;
 
 @ccclass("CBatWar")
@@ -16,6 +17,7 @@ export class CBatWar extends Component {
         this.node.on("MSG_PET_BIRTH", this.onPetBirth, this);
         this.node.on("MSG_MONSTER_BIRTH", this.onMonsterBirth, this);
         this.node.on("MSG_BOSS_BIRTH", this.onBossBirth, this);
+        this.node.on("MSG_ENT_DEAD", this.onEntDead, this);
         //
         this.petOff.push(new Vec3(-50, 50, 0));
         this.petOff.push(new Vec3(-50, 50, 0));
@@ -33,6 +35,7 @@ export class CBatWar extends Component {
         this.node.off("MSG_PET_BIRTH", this.onPetBirth, this);
         this.node.off("MSG_MONSTER_BIRTH", this.onMonsterBirth, this);
         this.node.off("MSG_BOSS_BIRTH", this.onBossBirth, this);
+        this.node.off("MSG_ENT_DEAD", this.onEntDead, this);
     }
 
     public onHeroBirth(target: Node) {
@@ -83,6 +86,13 @@ export class CBatWar extends Component {
                 t_slot_node.addChild(target);
             }
         }
+    }
+
+    public onEntDead(target: Node, typename: string) {
+        if (typename === "monster") {
+            CLevelMgr.inst().m_monster_ctrl.delMonster(target.uuid);
+        }
+
     }
 
     public getWarPos(wpos: Vec3, out: Vec3) {
