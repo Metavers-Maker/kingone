@@ -34,6 +34,13 @@ export class CBatHero0 extends Component {
         this.node.off("MSG_BULLET_DEAD", this.onBulletDead, this);
     }
 
+    protected onPropRefresh() {
+        let t_batunit = this.node.getComponent("CBatUnit") as CBatUnit;
+        if (t_batunit) {
+            //
+        }
+    }
+
     protected canAtk() {
         let t_batunit = this.node.getComponent("CBatUnit") as CBatUnit;
         if (t_batunit) {

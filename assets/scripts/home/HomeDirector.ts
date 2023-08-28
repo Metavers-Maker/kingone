@@ -5,7 +5,11 @@ const { ccclass, property, type } = _decorator;
 @ccclass('HomeDirector')
 export class HomeDirector extends Component {
 
+    public static _self: HomeDirector | null = null;
+
     protected onLoad(): void {
+        //
+        HomeDirector._self = this;
         //
     }
 
