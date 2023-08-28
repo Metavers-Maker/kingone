@@ -4,6 +4,7 @@ import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
 import { CBossCtrl } from "./CBossCtrl";
 import { CMonsterCtrl } from "./CMonsterCtrl";
+import { BatMonsterCtrlState } from "../../base/CDef";
 
 /**
  * level manager use level ctrl / boss ctrl
@@ -50,11 +51,11 @@ export class CLevelMgr {
     //发兵
     public emitMonster() {
         if (this.m_step >= 5) {
+            //发射BOSS
             this.m_boss_ctrl.start("Prefab/boss/boss0");
-            // this.emitBoss("Prefab/boss/boss0");
         } else {
+            //发射怪物
             this.m_monster_ctrl.start(null, this.m_chapter, this.m_level, this.m_step);
-            // this.emitNormal("Prefab/monster/monster0");
         }
         console.log("CLevelMgr emitMonster");
     }
@@ -62,6 +63,7 @@ export class CLevelMgr {
     //通关
     public pass() {
         //
+        console.log("CLevelMgr pass");
         if (this.m_step === 5) {
             //进度完成
             if (this.m_level === 10) {
@@ -81,10 +83,19 @@ export class CLevelMgr {
         if (this.m_msg_node) {
             this.m_msg_node.emit("MSG_BAT_RUN");
         }
+        //动画结束后继续发射怪物
+        this.emitMonster()
     }
 
     //
     public update(dt: number) {
+
+        //怪物控制
+        if (this.m_monster_ctrl.m_state === BatMonsterCtrlState.E_BAT_MONSTER_ST_WAIT) {
+            this.emitMonster();
+        } else if (this.m_monster_ctrl.m_state === BatMonsterCtrlState.E_BAT_MONSTER_ST_END) {
+            this.pass();
+        }
         //
         this.m_boss_ctrl.update(dt);
         this.m_monster_ctrl.update(dt);

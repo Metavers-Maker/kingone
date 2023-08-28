@@ -18,20 +18,20 @@ export class CBatHero0 extends Component {
 
     public m_atk_target: Node | null = null;
 
+    public m_bulletNodes: Map<string, Node> = new Map();
+
     protected onLoad(): void {
-        //
         this.anim = this.node.getComponent(Animation)!;
         console.log("CBatHero0 onLoad", this.anim);
-
     }
 
     protected start(): void {
-        //
         this.anim.play('fallen1_atk');
+        this.node.on("MSG_BULLET_DEAD", this.onBulletDead, this);
     }
 
     protected onDestroy(): void {
-
+        this.node.off("MSG_BULLET_DEAD", this.onBulletDead, this);
     }
 
     protected canAtk() {
@@ -48,15 +48,7 @@ export class CBatHero0 extends Component {
 
     protected update(dt: number): void {
         let t_target = this.canAtk();
-        if (t_target) {
-            this.attack(dt);
-        }
-    }
-
-    protected attack(dt: number) {
-        this.m_acc_time += dt;
-        if (this.m_acc_time > this.m_fire_dert) {
-            this.m_acc_time = 0;
+        if (t_target && this.m_bulletNodes.size === 0) {
             this.fire();
         }
     }
@@ -70,7 +62,14 @@ export class CBatHero0 extends Component {
                 CBatWar._self?.getWarPos(this.node.getWorldPosition(), warPos);
                 bullet.init(this.node, BatBulletMode.E_BULLET_MODE_TARGET, warPos, this.m_atk_target);
             }
+            //
             CBatWar._self?.node.addChild(bulletNode);
+            this.m_bulletNodes.set(bulletNode.uuid, bulletNode);
         }
+    }
+
+    onBulletDead(uuid: string) {
+        this.m_bulletNodes.delete(uuid);
+        console.log("onBulletDead", uuid);
     }
 }

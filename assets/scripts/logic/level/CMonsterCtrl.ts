@@ -4,6 +4,7 @@ import { CResMgr } from "../ResMgr";
 import { CBatUnit } from "../battle/CBatUnit";
 import { CBatWar } from "../battle/CBatWar";
 import { CBatMonsterMove } from "../battle/batmonster/CBatMonsterMove";
+import { BatMonsterCtrlState } from "../../base/CDef";
 
 /**
  * level manager use level ctrl / boss ctrl
@@ -16,6 +17,9 @@ export class CMonsterCtrl {
     public m_min_num: number = 4;
 
     public m_max_num: number = 6;
+
+    //怪物状态 1 正在进行 ，2 等待下一关， 0 等待出怪
+    public m_state: BatMonsterCtrlState = BatMonsterCtrlState.E_BAT_MONSTER_ST_WAIT;
 
     public init() {
         //load level data from tbl
@@ -43,7 +47,11 @@ export class CMonsterCtrl {
 
     public delMonster(uuid: string) {
         this.m_monsterNodes.delete(uuid);
-        console.log("delMonster", uuid);
+        if (this.m_monsterNodes.size === 0) {
+            //怪物都死亡，进入下一关
+            this.m_state = BatMonsterCtrlState.E_BAT_MONSTER_ST_END;
+        }
+        console.log("delMonster", uuid, this.m_monsterNodes.size, this.m_state);
     }
 
     //
@@ -77,8 +85,9 @@ export class CMonsterCtrl {
                 this.m_monsterNodes.set(nor_node.uuid, nor_node);
                 CBatWar._self?.node.emit("MSG_MONSTER_BIRTH", nor_node, i);
             }
-            // console.log("CMonsterCtrl emit", nor_node, monsterPrefab, t_emit_num);
         }
+        this.m_state = BatMonsterCtrlState.E_BAT_MONSTER_ST_RUN;
+        console.log("CMonsterCtrl emit", t_emit_num);
     }
 
     //

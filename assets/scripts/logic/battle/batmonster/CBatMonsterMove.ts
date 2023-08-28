@@ -48,7 +48,7 @@ export class CBatMonsterMove extends Component {
                 this.m_cur_pos.x = this.m_cur_pos.x - t_move_dis;
                 this.node.setPosition(this.m_cur_pos);
             }
-            console.log("CBatMonsterMove update", t_target_pos.x, this.m_cur_pos.x, this.node.uuid);
+            // console.log("CBatMonsterMove update", t_target_pos.x, this.m_cur_pos.x, this.node.uuid);
         }
     }
 }

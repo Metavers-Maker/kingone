@@ -44,7 +44,7 @@ export class CBatDirector extends Component {
                 this.m_acc_time = 0;
                 this.m_bat_status = BatStatus.E_BAT_NOR;
                 //发射怪物
-                CLevelMgr.inst().emitMonster();
+                CLevelMgr.inst().update(dt);
             }
         } else if (this.m_bat_status === BatStatus.E_BAT_NOR) {
             // 战斗中

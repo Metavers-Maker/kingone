@@ -28,3 +28,10 @@ export enum BatBulletMode {
     E_BULLET_MODE_DIR = 0,  //方向性子弹
     E_BULLET_MODE_TARGET = 1, //目标性子弹
 }
+
+export enum BatMonsterCtrlState {
+    E_BAT_MONSTER_ST_WAIT = 0,  //方向性子弹
+    E_BAT_MONSTER_ST_RUN = 1, //目标性子弹
+    E_BAT_MONSTER_ST_END = 2, 
+}
+

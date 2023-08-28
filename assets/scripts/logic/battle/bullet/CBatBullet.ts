@@ -41,11 +41,18 @@ export class CBatBullet extends Component {
         // console.log("CBatBullet destroy", this.node.uuid);
     }
 
+    protected onDead() {
+        if (this.m_src) {
+            this.m_src.emit("MSG_BULLET_DEAD", this.node.uuid);
+        }
+        this.node.removeFromParent();
+        this.node.destroy();
+    }
+
     protected update(dt: number): void {
         if (this.m_src && this.m_src.isValid === false) {
             //子弹发射放不存在，则死亡
-            this.node.removeFromParent();
-            this.node.destroy();
+            this.onDead();
             return;
         }
         //bullet fly dis
@@ -76,15 +83,12 @@ export class CBatBullet extends Component {
 
     protected isOutRange() {
         if (Math.abs(this.m_cur_pos.x) > 540 || Math.abs(this.m_cur_pos.y) > 960) {
-            this.node.removeFromParent();
-            this.node.destroy();
+            this.onDead();
         }
     }
 
     protected onHit() {
         //子弹移除
-        this.node.removeFromParent();
-        this.node.destroy();
         //扣血(敌我双方都存在)
         if (this.m_target && this.m_target.isValid && this.m_src && this.m_src.isValid) {
             let src_batunit = this.m_target.getComponent("CBatUnit") as CBatUnit;
@@ -96,5 +100,7 @@ export class CBatBullet extends Component {
                 target_batunit.onHit(this.m_atk);
             }
         }
+        //
+        this.onDead();
     }
 }

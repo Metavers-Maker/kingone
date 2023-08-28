@@ -92,7 +92,7 @@ export class CBatWar extends Component {
         if (typename === "monster") {
             CLevelMgr.inst().m_monster_ctrl.delMonster(target.uuid);
         }
-
+        console.log("onEntDead", target, typename);
     }
 
     public getWarPos(wpos: Vec3, out: Vec3) {
