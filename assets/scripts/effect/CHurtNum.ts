@@ -11,19 +11,19 @@ export class CHurtNum extends Component {
     }
 
     start() {
-        let ani = this.node.getComponent(Animation);
+        let ani = this.node.getChildByName("Label")?.getComponent(Animation);
         if (ani) {
             ani.on(Animation.EventType.FINISHED, this.aniCallback, this);
         }
         //
-        let l = this.node.getComponent("cc.Label") as Label;
+        let l = this.node.getChildByName("Label")?.getComponent("cc.Label") as Label;
         if (l) {
             l.string = this.hurtNum + '';
         }
     }
 
     protected onDestroy(): void {
-        let ani = this.node.getComponent(Animation);
+        let ani = this.node.getChildByName("Label")?.getComponent(Animation);
         if (ani) {
             ani.off(Animation.EventType.FINISHED, this.aniCallback, this);
         }

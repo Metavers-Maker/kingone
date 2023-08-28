@@ -20,8 +20,8 @@
   "camera-infos": {
     "b59e0761-ea04-4a78-b7c0-1672219c7f18": {
       "position": {
-        "x": 295.596334751016,
-        "y": 833.9073168303496,
+        "x": 296.596334751016,
+        "y": 834.9073168303496,
         "z": 5000
       },
       "rotation": {
@@ -2879,10 +2879,64 @@
         "y": 0,
         "z": 0
       }
+    },
+    "ed6fLPm6RJ6bZmZC8z9QTN": {
+      "position": {
+        "x": 745,
+        "y": 315.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "7c7EhMXyZK6K6087qIcq8n": {
+      "position": {
+        "x": 745,
+        "y": 315,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "1d4MEL5mJJdoPYYCyPpbDP": {
+      "position": {
+        "x": 745,
+        "y": 315.00000000000006,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
     }
   },
   "camera-uuids": [
-    "c8wjpFqUFFRLfgdVceOmRj"
+    "1d4MEL5mJJdoPYYCyPpbDP"
   ],
   "__version__": "1.0.0",
   "camera": {

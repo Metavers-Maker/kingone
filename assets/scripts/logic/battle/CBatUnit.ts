@@ -2,6 +2,8 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
 import { CBatWar } from "./CBatWar";
 import { CBatDirector } from "./CBatDirector";
+import { CResMgr } from "../ResMgr";
+import { CHurtNum } from "../../effect/CHurtNum";
 const { ccclass, property } = _decorator;
 /**
  * use for hero ,enemy, boss for base number
@@ -62,6 +64,23 @@ export class CBatUnit extends Component {
     }
 
     public onHit(atk: number) {
+        if (!CBatWar._self) {
+            return;
+        }
+        let hurtNode = CResMgr.inst().createNode("prefab/effect/hurtnum");
+        if (hurtNode) {
+            let hurtNum = hurtNode.getComponent("CHurtNum") as CHurtNum;
+            if (hurtNum) {
+                hurtNum.create(atk);
+            }
+            let hurtpos: Vec3 = new Vec3();
+            CBatWar._self.getWarPos(this.node.position, hurtpos);
+            hurtNode.setPosition(this.node.position);
+            //
+            console.log("monster pos", this.node, this.node.position, hurtNode);
+            CBatWar._self?.node.addChild(hurtNode);
+        }
+        //
         this.decHp(atk);
     }
 }
