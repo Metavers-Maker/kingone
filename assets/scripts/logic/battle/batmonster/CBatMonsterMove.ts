@@ -10,7 +10,11 @@ export class CBatMonsterMove extends Component {
 
     public m_cur_pos: Vec3 | null = new Vec3(0, 0, 0);
 
-    public m_atk_range: number = 50;
+    public m_atk_range: number = 150;
+
+    public create(_atk_range: number) {
+        this.m_atk_range = _atk_range;
+    }
 
     protected onLoad(): void {
 

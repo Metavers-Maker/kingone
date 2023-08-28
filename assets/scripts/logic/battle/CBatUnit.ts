@@ -1,5 +1,7 @@
 
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
+import { CBatWar } from "./CBatWar";
+import { CBatDirector } from "./CBatDirector";
 const { ccclass, property } = _decorator;
 /**
  * use for hero ,enemy, boss for base number
@@ -38,7 +40,9 @@ export class CBatUnit extends Component {
         this.m_hp_cur = this.m_hp_cur - hurt;
         if (this.m_hp_cur <= 0) {
             //死亡
-            //
+            this.node.removeFromParent();
+            this.node.destroy();
+            CBatDirector._self?.node.emit("MSG_ENT_DEAD", this.node);
             return true;
         }
         return false;
@@ -57,7 +61,7 @@ export class CBatUnit extends Component {
     }
 
     public onHit(atk: number) {
-
+        this.decHp(atk);
     }
 }
 

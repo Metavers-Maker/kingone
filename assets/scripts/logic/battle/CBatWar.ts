@@ -60,7 +60,7 @@ export class CBatWar extends Component {
         if (target && target.isValid) {
             let t_slot_node = this.node.getChildByPath("slothero");
             if (t_slot_node) {
-                let t_rand_x = t_slot_node.position.x + 200 + Math.random() * 50;
+                let t_rand_x = t_slot_node.position.x + 400 + Math.random() * 50;
                 let t_rand_y = t_slot_node.position.y + Math.random() * 100 - 50;
                 target.setPosition(t_rand_x, t_rand_y, 0)
                 this.node.addChild(target)

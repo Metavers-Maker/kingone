@@ -64,7 +64,7 @@ export class CMonsterCtrl {
                 //
                 let t_batmove = nor_node.addComponent("CBatMonsterMove") as CBatMonsterMove;
                 if (t_batmove) {
-                    // t_batunit.create();
+                    t_batmove.create(t_batunit ? t_batunit.m_atk_range : 50);
                 }
                 //
                 this.m_monsterNods.push(nor_node);
