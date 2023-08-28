@@ -59,6 +59,7 @@ export class CMonsterCtrl {
                 let t_batunit = nor_node.addComponent("CBatUnit") as CBatUnit;
                 if (t_batunit) {
                     t_batunit.createByCLS(_chapter, _level, _step);
+                    t_batunit.m_atk_range = 50;
                 }
                 //
                 let t_batmove = nor_node.addComponent("CBatMonsterMove") as CBatMonsterMove;
@@ -69,7 +70,7 @@ export class CMonsterCtrl {
                 this.m_monsterNods.push(nor_node);
                 CBatWar._self?.node.emit("MSG_MONSTER_BIRTH", nor_node, i);
             }
-            console.log("CMonsterCtrl emit", nor_node, monsterPrefab, t_emit_num);
+            // console.log("CMonsterCtrl emit", nor_node, monsterPrefab, t_emit_num);
         }
     }
 

@@ -6,6 +6,9 @@ export class CBatWar extends Component {
 
     public static _self: CBatWar | null = null;
 
+    //宠物站位
+    public petOff: Vec3[] = [];
+
     protected onLoad(): void {
         console.log("CBatWar onLoad");
         CBatWar._self = this;
@@ -13,6 +16,12 @@ export class CBatWar extends Component {
         this.node.on("MSG_PET_BIRTH", this.onPetBirth, this);
         this.node.on("MSG_MONSTER_BIRTH", this.onMonsterBirth, this);
         this.node.on("MSG_BOSS_BIRTH", this.onBossBirth, this);
+        //
+        this.petOff.push(new Vec3(-50, 50, 0));
+        this.petOff.push(new Vec3(-50, 50, 0));
+        this.petOff.push(new Vec3(-50, 50, 0));
+        this.petOff.push(new Vec3(-50, 50, 0));
+        this.petOff.push(new Vec3(-50, 50, 0));
     }
 
     protected start(): void {
@@ -28,7 +37,7 @@ export class CBatWar extends Component {
 
     public onHeroBirth(target: Node) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slot0");
+            let t_slot_node = this.node.getChildByPath("slothero");
             if (t_slot_node) {
                 // t_slot_node.addChild(target);
                 target.setPosition(t_slot_node.position);
@@ -39,9 +48,9 @@ export class CBatWar extends Component {
 
     public onPetBirth(target: Node, index: number) {
         if (target && target.isValid) {
-            let pet_pos = "slot" + index;
-            let t_slot_node = this.node.getChildByPath(pet_pos);
+            let t_slot_node = this.node.getChildByPath("slothero");
             if (t_slot_node) {
+                target.setPosition(this.petOff[index]);
                 t_slot_node.addChild(target);
             }
         }
@@ -49,13 +58,14 @@ export class CBatWar extends Component {
 
     public onMonsterBirth(target: Node, index: number) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slotmonster");
+            let t_slot_node = this.node.getChildByPath("slothero");
             if (t_slot_node) {
-                let t_rand_x = 200 + Math.random() * 50;
-                let t_rand_y = Math.random() * 150 - 50;
-                target.setPosition(t_slot_node.position.x + t_rand_x, t_slot_node.position.y + t_rand_y, t_slot_node.position.z)
+                let t_rand_x = t_slot_node.position.x + 200 + Math.random() * 50;
+                let t_rand_y = t_slot_node.position.y + Math.random() * 100 - 50;
+                target.setPosition(t_rand_x, t_rand_y, 0)
                 this.node.addChild(target)
             }
+            console.log("onMonsterBirth target", target.position);
             // this.node.children.sort((a: Node, b: Node) => {
             //     return a.position.y < b.position.y ? 1 : -1;
             // });
@@ -68,7 +78,7 @@ export class CBatWar extends Component {
 
     public onBossBirth(target: Node) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slot2");
+            let t_slot_node = this.node.getChildByPath("slothero");
             if (t_slot_node) {
                 t_slot_node.addChild(target);
             }

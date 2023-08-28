@@ -22,12 +22,12 @@ export class CBatHero0 extends Component {
         //
         this.anim = this.node.getComponent(Animation)!;
         console.log("CBatHero0 onLoad", this.anim);
-        
+
     }
 
     protected start(): void {
         //
-        this.anim.play('fallen1_die');
+        this.anim.play('fallen1_atk');
     }
 
     protected onDestroy(): void {
