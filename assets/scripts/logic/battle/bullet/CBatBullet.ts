@@ -1,6 +1,9 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
 import { BatBulletMode } from "../../../base/CDef";
+import { CBatUnit } from "../CBatUnit";
 const { ccclass, property } = _decorator;
+
+//normal bullet
 
 @ccclass("CBatBullet")
 export class CBatBullet extends Component {
@@ -16,6 +19,8 @@ export class CBatBullet extends Component {
     public m_speed: number = 200;
 
     public m_cur_pos: Vec3 = new Vec3(1.0, 0.0, 0.0);
+
+    public m_atk: number = 10;
 
     public init(_src: Node, _mode: BatBulletMode, startPos: Vec3, _target: Node | null = null) {
         this.m_src = _src;
@@ -37,6 +42,12 @@ export class CBatBullet extends Component {
     }
 
     protected update(dt: number): void {
+        if (this.m_src && this.m_src.isValid === false) {
+            //子弹发射放不存在，则死亡
+            this.node.removeFromParent();
+            this.node.destroy();
+            return;
+        }
         //bullet fly dis
         let t_dis = this.m_speed * dt;
         if (this.m_bullet_mode === BatBulletMode.E_BULLET_MODE_DIR) {
@@ -46,8 +57,8 @@ export class CBatBullet extends Component {
                 let t_target_pos = this.m_target.getPosition();
                 let t_real_dis = Vec3.distance(this.m_cur_pos, t_target_pos);
                 if (t_dis >= t_real_dis) {
-                    //collider or cross
                     t_dis = t_real_dis;
+                    this.onHit();
                 }
                 //计算方向
                 Vec3.subtract(this.m_dir, t_target_pos, this.m_cur_pos);
@@ -67,6 +78,23 @@ export class CBatBullet extends Component {
         if (Math.abs(this.m_cur_pos.x) > 540 || Math.abs(this.m_cur_pos.y) > 960) {
             this.node.removeFromParent();
             this.node.destroy();
+        }
+    }
+
+    protected onHit() {
+        //子弹移除
+        this.node.removeFromParent();
+        this.node.destroy();
+        //扣血(敌我双方都存在)
+        if (this.m_target && this.m_target.isValid && this.m_src && this.m_src.isValid) {
+            let src_batunit = this.m_target.getComponent("CBatUnit") as CBatUnit;
+            if (src_batunit) {
+                this.m_atk = src_batunit.m_atk;
+            }
+            let target_batunit = this.m_target.getComponent("CBatUnit") as CBatUnit;
+            if (target_batunit) {
+                target_batunit.onHit(this.m_atk);
+            }
         }
     }
 }

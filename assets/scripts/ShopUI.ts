@@ -15,7 +15,9 @@ export class ShopUI extends Component {
     public btnsNode: Node = null!;
     @property(ChargeUI)
     public chargeUI: ChargeUI = null!;
-
+    @property(Node)
+    public testNode: Node = null!;
+    
     private _panelType = PanelType.Home;
     private _home: HomeUI = null!;
 

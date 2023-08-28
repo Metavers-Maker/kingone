@@ -28,7 +28,7 @@ export class CBatWar extends Component {
 
     public onHeroBirth(target: Node) {
         if (target && target.isValid) {
-            let t_slot_node = this.node.getChildByPath("slothero");
+            let t_slot_node = this.node.getChildByPath("slot0");
             if (t_slot_node) {
                 // t_slot_node.addChild(target);
                 target.setPosition(t_slot_node.position);
@@ -51,14 +51,17 @@ export class CBatWar extends Component {
         if (target && target.isValid) {
             let t_slot_node = this.node.getChildByPath("slotmonster");
             if (t_slot_node) {
-                let t_rand_x = Math.random() * 200;
-                let t_rand_y = Math.random() * 100;
+                let t_rand_x = 200 + Math.random() * 50;
+                let t_rand_y = Math.random() * 150 - 50;
                 target.setPosition(t_slot_node.position.x + t_rand_x, t_slot_node.position.y + t_rand_y, t_slot_node.position.z)
                 this.node.addChild(target)
             }
-            //
             // this.node.children.sort((a: Node, b: Node) => {
-
+            //     return a.position.y < b.position.y ? 1 : -1;
+            // });
+            // this.node.children.forEach((item, index) => {
+            //     console.log("child", index, item.position.y);
+            //     item.setSiblingIndex(this.node.children.length + 1 - index);
             // });
         }
     }

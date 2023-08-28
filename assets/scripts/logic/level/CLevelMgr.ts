@@ -30,8 +30,8 @@ export class CLevelMgr {
     //small level
     public m_level: number = 1;
 
-    //game progress (if m_progress equal = 5 is boss battle)
-    public m_progress: number = 1;
+    //game step (if step equal = 5 is boss battle)
+    public m_step: number = 1;
 
     public init() {
         //load level data from tbl
@@ -49,11 +49,11 @@ export class CLevelMgr {
 
     //发兵
     public emitMonster() {
-        if (this.m_progress >= 5) {
+        if (this.m_step >= 5) {
             this.m_boss_ctrl.start("Prefab/boss/boss0");
             // this.emitBoss("Prefab/boss/boss0");
         } else {
-            this.m_monster_ctrl.start(null);
+            this.m_monster_ctrl.start(null, this.m_chapter, this.m_level, this.m_step);
             // this.emitNormal("Prefab/monster/monster0");
         }
         console.log("CLevelMgr emitMonster");
@@ -62,20 +62,20 @@ export class CLevelMgr {
     //通关
     public pass() {
         //
-        if (this.m_progress === 5) {
+        if (this.m_step === 5) {
             //进度完成
             if (this.m_level === 10) {
                 //章节增加
                 this.m_chapter += 1;
                 this.m_level = 1;
-                this.m_progress = 1;
+                this.m_step = 1;
             } else {
                 //小节提升
                 this.m_level += 1;
-                this.m_progress = 1;
+                this.m_step = 1;
             }
         } else {
-            this.m_progress = 1;
+            this.m_step = 1;
         }
         //发送战斗间歇动画
         if (this.m_msg_node) {
