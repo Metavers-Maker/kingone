@@ -8,22 +8,18 @@ export class CHurtNum extends Component {
 
     create(hurt: number) {
         this.hurtNum = hurt;
+        console.log("CHurtNum create", hurt);
     }
 
     start() {
-        let ani = this.node.getChildByName("Label")?.getComponent(Animation);
+        let ani = this.node.getChildByName("aa")?.getComponent(Animation);
         if (ani) {
             ani.on(Animation.EventType.FINISHED, this.aniCallback, this);
-        }
-        //
-        let l = this.node.getChildByName("Label")?.getComponent("cc.Label") as Label;
-        if (l) {
-            l.string = this.hurtNum + '';
         }
     }
 
     protected onDestroy(): void {
-        let ani = this.node.getChildByName("Label")?.getComponent(Animation);
+        let ani = this.node.getChildByName("aa")?.getComponent(Animation);
         if (ani) {
             ani.off(Animation.EventType.FINISHED, this.aniCallback, this);
         }
@@ -38,7 +34,10 @@ export class CHurtNum extends Component {
     }
 
     update(dt: number) {
-
+        let l = this.node.getChildByName("aa")?.getComponent("cc.Label") as Label;
+        if (l) {
+            l.string = this.hurtNum + 'a';
+        }
     }
 
 }

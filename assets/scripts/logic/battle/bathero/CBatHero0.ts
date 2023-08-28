@@ -68,6 +68,10 @@ export class CBatHero0 extends Component {
                 let warPos = new Vec3();
                 CBatWar._self?.getWarPos(this.node.getWorldPosition(), warPos);
                 bullet.init(this.node, BatBulletMode.E_BULLET_MODE_TARGET, warPos, this.m_atk_target);
+                let t_batunit = this.node.getComponent("CBatUnit") as CBatUnit;
+                if (t_batunit) {
+                    bullet.m_atk = t_batunit.m_atk;
+                }
             }
             //
             CBatWar._self?.node.addChild(bulletNode);

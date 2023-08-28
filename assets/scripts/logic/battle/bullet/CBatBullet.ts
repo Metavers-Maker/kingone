@@ -90,9 +90,10 @@ export class CBatBullet extends Component {
 
     protected onHit() {
         //子弹移除
+        // console.log("bullet onhit", this.m_atk);
         //扣血(敌我双方都存在)
         if (this.m_target && this.m_target.isValid && this.m_src && this.m_src.isValid) {
-            let src_batunit = this.m_target.getComponent("CBatUnit") as CBatUnit;
+            let src_batunit = this.node.getComponent("CBatUnit") as CBatUnit;
             if (src_batunit) {
                 this.m_atk = src_batunit.m_atk;
             }

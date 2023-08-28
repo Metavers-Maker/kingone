@@ -31,6 +31,7 @@ export class CBatUnit extends Component {
 
     public createByHero() {
         //
+        this.m_atk = 50;
     }
 
     public createByCLS(_chapter: number, _level: number, _step: number) {
@@ -67,6 +68,7 @@ export class CBatUnit extends Component {
         if (!CBatWar._self) {
             return;
         }
+        // console.log("");
         let hurtNode = CResMgr.inst().createNode("prefab/effect/hurtnum");
         if (hurtNode) {
             let hurtNum = hurtNode.getComponent("CHurtNum") as CHurtNum;
@@ -76,8 +78,7 @@ export class CBatUnit extends Component {
             let hurtpos: Vec3 = new Vec3();
             CBatWar._self.getWarPos(this.node.position, hurtpos);
             hurtNode.setPosition(this.node.position);
-            //
-            console.log("monster pos", this.node, this.node.position, hurtNode);
+            // console.log("monster pos", this.node, this.node.position, hurtNode);
             CBatWar._self?.node.addChild(hurtNode);
         }
         //
