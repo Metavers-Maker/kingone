@@ -95,7 +95,7 @@ export class ListViewCtrl extends Component {
         }
         // update lastContentPosY
         this._lastContentPosY = this.scrollView.content!.position.y;
-        this.lblTotalItems.string = "Total Items: " + this.totalCount;
+        // this.lblTotalItems.string = "Total Items: " + this.totalCount;
     }
 
     addItem() {
