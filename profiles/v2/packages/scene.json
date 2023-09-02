@@ -20,8 +20,8 @@
   "camera-infos": {
     "b59e0761-ea04-4a78-b7c0-1672219c7f18": {
       "position": {
-        "x": 295.596334751016,
-        "y": 833.9073168303496,
+        "x": 279.62561826658873,
+        "y": 242.7388644025018,
         "z": 5000
       },
       "rotation": {
@@ -2772,10 +2772,10 @@
         "z": 0
       }
     },
-    "87HPfIVg1F8pe4e5V6xTxJ": {
+    "b2BEiHoK5DVbWvngT5oROW": {
       "position": {
-        "x": 808.4360760195511,
-        "y": 488.1937818166502,
+        "x": 882,
+        "y": 621.0000000000001,
         "z": 5000
       },
       "rotation": {
@@ -2790,10 +2790,10 @@
         "z": 0
       }
     },
-    "0bkO3cRNFNKIQlcMNG7G45": {
+    "8bf3ChZrVL5Y+oGy2Wg+gg": {
       "position": {
-        "x": 745,
-        "y": 481,
+        "x": 882,
+        "y": 621.0000000000001,
         "z": 5000
       },
       "rotation": {
@@ -2808,10 +2808,10 @@
         "z": 0
       }
     },
-    "3aDrI3Z6ZKirTnNw1xtJ5h": {
+    "6cxWgbWuxNLbOaFXowF76h": {
       "position": {
-        "x": 343.33176017686225,
-        "y": 481.10609337522874,
+        "x": 1074.60671320283,
+        "y": 739.9863786108393,
         "z": 5000
       },
       "rotation": {
@@ -2826,10 +2826,10 @@
         "z": 0
       }
     },
-    "32iM59BtRMTZJxL0xwSrsW": {
+    "1bfA7kpXZKloc5fbQnPP0i": {
       "position": {
-        "x": 745,
-        "y": 315.00000000000006,
+        "x": 528.7867826846768,
+        "y": 355.05431852027857,
         "z": 5000
       },
       "rotation": {
@@ -2844,10 +2844,10 @@
         "z": 0
       }
     },
-    "6dO34n1ZxCdruGTqUQRjcJ": {
+    "a9HwFLSylNuJNnyZGOIIAT": {
       "position": {
-        "x": 745,
-        "y": 315.00000000000006,
+        "x": 595.6948051948052,
+        "y": 312.5162337662338,
         "z": 5000
       },
       "rotation": {
@@ -2862,10 +2862,28 @@
         "z": 0
       }
     },
-    "c8wjpFqUFFRLfgdVceOmRj": {
+    "d5RXWcPBJM1qHEHQmoSUGp": {
       "position": {
-        "x": 745,
-        "y": 315.00000000000006,
+        "x": 882,
+        "y": 621.0000000000001,
+        "z": 5000
+      },
+      "rotation": {
+        "x": 0,
+        "y": 0,
+        "z": 0,
+        "w": 1
+      },
+      "viewCenter": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+      }
+    },
+    "5c/IDnRK9FbYAeUppTitq2": {
+      "position": {
+        "x": 320,
+        "y": 480,
         "z": 5000
       },
       "rotation": {
@@ -2882,7 +2900,7 @@
     }
   },
   "camera-uuids": [
-    "c8wjpFqUFFRLfgdVceOmRj"
+    "5c/IDnRK9FbYAeUppTitq2"
   ],
   "__version__": "1.0.0",
   "camera": {
