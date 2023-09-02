@@ -2,6 +2,9 @@
 import { _decorator, Component, Node, Prefab, instantiate, Vec3, Camera } from "cc";
 import { CBatWar } from "./CBatWar";
 import { CBatDirector } from "./CBatDirector";
+import { CResMgr } from "../ResMgr";
+import { CHurtNum } from "../../effect/CHurtNum";
+import { CKingInst } from "../CKingInst";
 const { ccclass, property } = _decorator;
 /**
  * use for hero ,enemy, boss for base number
@@ -29,11 +32,13 @@ export class CBatUnit extends Component {
 
     public createByHero() {
         //
+        this.m_atk = 50;
     }
 
     public createByCLS(_chapter: number, _level: number, _step: number) {
         //根据 章节-关卡-进度 初始化batunit
         this.m_hp = _chapter * 1000 + _level * 100 + _step * 10 + 10;
+        this.m_hp = 100;
         this.m_hp_cur = this.m_hp;
     }
 
@@ -41,8 +46,6 @@ export class CBatUnit extends Component {
         this.m_hp_cur = this.m_hp_cur - hurt;
         if (this.m_hp_cur <= 0) {
             //死亡
-            this.node.removeFromParent();
-            this.node.destroy();
             CBatWar._self?.node.emit("MSG_ENT_DEAD", this.node, "monster");
             return true;
         }
@@ -62,6 +65,23 @@ export class CBatUnit extends Component {
     }
 
     public onHit(atk: number) {
+        if (!CBatWar._self) {
+            return;
+        }
+        // console.log("");
+        let hurtNode = CResMgr.inst().createNode("prefab/effect/hurtnum");
+        if (hurtNode) {
+            let hurtNum = hurtNode.getComponent("CHurtNum") as CHurtNum;
+            if (hurtNum) {
+                hurtNum.create(atk);
+            }
+            let hurtpos: Vec3 = new Vec3();
+            CBatWar._self.getWarPos(this.node.position, hurtpos);
+            hurtNode.setPosition(this.node.position);
+            // console.log("monster pos", this.node, this.node.position, hurtNode);
+            CBatWar._self?.node.addChild(hurtNode);
+        }
+        //
         this.decHp(atk);
     }
 }
