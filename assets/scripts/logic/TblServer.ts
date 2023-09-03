@@ -19,6 +19,7 @@ export class TblServer {
     public init(jsonData: any) {
         //
         this.tbldata = jsonData;
+        console.log("TblServer init", this.tbldata);
     }
 
 }
