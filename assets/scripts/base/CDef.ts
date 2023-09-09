@@ -11,10 +11,30 @@ export enum HeroQuality {
     E_HERO_QUA_SS = 3,
 }
 
+export enum EquipQuality {
+    E_QUIP_QUA_S0 = 0,
+    E_QUIP_QUA_S1 = 1,
+    E_QUIP_QUA_S2 = 2,
+    E_QUIP_QUA_S3 = 3,
+    E_QUIP_QUA_S4 = 4,
+    E_QUIP_QUA_S5 = 5,
+    E_QUIP_QUA_S6 = 6,
+    E_QUIP_QUA_S7 = 7,
+    E_QUIP_QUA_S8 = 8,
+    E_QUIP_QUA_S9 = 9,
+}
+
+
 export enum EquipType {
     E_EQUIP_BASE = 0,
-    E_EQUIP_ATK = 1,
-    E_EQUIP_DEF = 2,
+    E_EQUIP_WEAPON = 1,
+    E_EQUIP_GLASS = 3,
+    E_EQUIP_SHOT = 4,
+    E_EQUIP_CLOTH = 5,
+    E_EQUIP_KUZI = 6,
+    E_EQUIP_HAND = 7,
+    E_EQUIP_DIAMOND = 8,
+    E_EQUIP_BAOWU = 9,
 }
 
 export enum BatStatus {

@@ -5,6 +5,7 @@
 
 import { CPlayer } from "./entity/CPlayer";
 import { CUser } from "./entity/CUser";
+import { CEquipMgr } from "./equip/CEquipMgr";
 
 export class CKingInst {
 
@@ -22,7 +23,9 @@ export class CKingInst {
     public m_user: CUser = new CUser();
 
     public init() {
-
+        //
+        CEquipMgr.inst().init();
+        //
     }
 
 }
