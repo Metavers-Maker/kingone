@@ -2,8 +2,7 @@
 import { _decorator, Component, director, JsonAsset, Node, ProgressBar, resources, ScrollView, UITransform, Vec3 } from 'cc';
 import { TblServer } from '../logic/TblServer';
 import { CResMgr } from '../logic/ResMgr';
-import { CSkill } from '../logic/skill/CSkill';
-import { CSkillMgr } from '../logic/skill/CSkillMgr';
+import { CKingInst } from '../logic/CKingInst';
 const { ccclass, property, type } = _decorator;
 
 @ccclass('LoadDirector')
@@ -21,11 +20,10 @@ export class LoadDirector extends Component {
             console.log("LoadDirector load tbl", data);
             if (data) {
                 TblServer.inst().init(data.json);
-                CSkillMgr.inst().init();
                 //
                 CResMgr.inst().init(this.loadCallback, this);
-                //
                 CResMgr.inst().loadRes();
+                //
             }
         })
     }
@@ -33,6 +31,9 @@ export class LoadDirector extends Component {
     loadCallback(target: any, percent: number) {
         target.m_percent = percent;
         if (percent >= 100) {
+            //
+            CKingInst.inst().init();
+            //
             director.loadScene("home", (err, sc) => {
                 //change scene
                 console.log("LoadDirector load home sc", sc);

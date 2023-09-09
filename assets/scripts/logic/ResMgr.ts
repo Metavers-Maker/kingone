@@ -22,7 +22,6 @@ export class CResMgr {
     protected m_target: any = null;
 
     public init(_callback: Function, _target: any) {
-        //
         this.m_callback = _callback;
         this.m_target = _target;
     }
