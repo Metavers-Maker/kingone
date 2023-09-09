@@ -24,9 +24,10 @@ export class CSkillMgr {
     public init() {
         let json = TblServer.inst().tbldata.skill;
         for(let i =0; i< json.length;i++){
-            let kill:CKillEnty = json[i] as CKillEnty;
+            let kill:CKillEnty = new CKillEnty();
+            kill.parse(json[i]);
             console.log("CSkillMgr",kill);
-            this.killsMap.set(kill.id,kill);
+            this.killsMap.set(kill.uid,kill);
         }
     }
 
@@ -35,7 +36,7 @@ export class CSkillMgr {
 
     //绑定技能
     public bindSkill(skill: CKillEnty) {
-        this.activeSkills.set(skill.id,skill);
+        this.activeSkills.set(skill.uid,skill);
     }
 
     public getKillsData(){
