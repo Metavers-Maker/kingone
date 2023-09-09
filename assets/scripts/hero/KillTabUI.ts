@@ -31,7 +31,7 @@ export class KillTabUI extends Component {
                     if(nodeItem){
                         let button= nodeItem.getComponent(Button) as Button;
                         let sprite = nodeItem.getComponent(Sprite) as Sprite;
-                        if(item.own){
+                        if(!item.own){
                             sprite.grayscale = true;
                         }
                         let event:EventHandler= button.clickEvents[0];
