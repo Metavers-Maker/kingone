@@ -1,6 +1,7 @@
 import { _decorator, Button, Component, EventHandler, instantiate, Node } from 'cc';
 import { CSkillMgr } from '../logic/skill/CSkillMgr';
-import { CKill } from '../logic/entity/CKill';
+import { CKillEnty } from '../logic/entity/CKillEnty';
+import { CResMgr } from '../logic/ResMgr';
 const { ccclass, property } = _decorator;
 
 @ccclass('KillTabUI')
@@ -19,18 +20,22 @@ export class KillTabUI extends Component {
     }
 
     creatKill(){
-      
         if(this.killListNode){
             this.killListNode.removeAllChildren();
-            let killsData:Map<number,CKill> = CSkillMgr.inst().getKillsData();
-            for(let number of killsData.keys()){
-                let nodeItem = instantiate(this.killItemNode);
-                if(nodeItem){
-                    let button= nodeItem.getComponent(Button) as Button;
-                    let event:EventHandler= button.clickEvents[0];
-                    let custom = number+"";
-                    event.customEventData=custom;
-                    this.killListNode.addChild(nodeItem);
+            let killsData:Map<string,CKillEnty> = CSkillMgr.inst().getKillsData();
+            for(let item of killsData.values()){
+                console.log("KillTabUI killsData",killsData);
+                console.log("KillTabUI",item);
+                if(item){
+                    let nodeItem = CResMgr.inst().createNode(item.prefab);
+                    console.log("KillTabUI nodeItem",nodeItem);
+                    if(nodeItem){
+                        let button= nodeItem.getComponent(Button) as Button;
+                        let event:EventHandler= button.clickEvents[0];
+                        let custom = item.id;
+                        event.customEventData=custom;
+                        this.killListNode.addChild(nodeItem);
+                    }
                 }
             }
         }

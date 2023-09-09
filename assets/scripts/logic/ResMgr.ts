@@ -29,6 +29,7 @@ export class CResMgr {
 
     public loadRes() {
         this.loadHero();
+        this.loadKills();
     }
 
     public loadHero() {
@@ -138,7 +139,21 @@ export class CResMgr {
                 this.m_callback(this.m_target, 100);
             }
         });
+    }
 
+    public loadKills() {
+        //
+        let res_dir = "prefab/skill";
+        resources.loadDir(res_dir, (err, datas: Prefab[]) => {
+            console.log("loadKills", datas);
+            datas.forEach((item: Prefab) => {
+                let name = res_dir + '/' + item.name;
+                this.m_prefabs.set(name, item);
+            });
+            if (this.m_callback && this.m_target) {
+                this.m_callback(this.m_target, 100);
+            }
+        });
     }
 
     public createNode(resurl: string): Node | null {

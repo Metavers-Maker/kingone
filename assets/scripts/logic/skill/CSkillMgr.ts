@@ -4,13 +4,14 @@
 */
 
 import { TblServer } from "../TblServer";
-import { CKill } from "../entity/CKill";
+import { CKillEnty } from "../entity/CKillEnty";
+
 
 export class CSkillMgr {
 
     public static m_inst: CSkillMgr | null = null;
 
-    public killsMap: Map<number, CKill> = new Map();
+    public killsMap: Map<string, CKillEnty> = new Map();
 
     static inst() {
         if (this.m_inst === null) {
@@ -21,19 +22,20 @@ export class CSkillMgr {
 
     //通过技能表来初始化全部技能
     public init() {
-        let json = TblServer.inst().tbldata.kill;
+        let json = TblServer.inst().tbldata.skill;
         for(let i =0; i< json.length;i++){
-            let kill:CKill = json[i] as CKill;
-            this.killsMap.set(i,kill);
+            let kill:CKillEnty = json[i] as CKillEnty;
+            console.log("CSkillMgr",kill);
+            this.killsMap.set(kill.id,kill);
         }
     }
 
     //激活技能(节点)
-    public activeSkills: Map<number, Node> = new Map();
+    public activeSkills: Map<string, CKillEnty> = new Map();
 
     //绑定技能
-    public bindSkill(index: number, skillNode: Node) {
-
+    public bindSkill(skill: CKillEnty) {
+        this.activeSkills.set(skill.id,skill);
     }
 
     public getKillsData(){
