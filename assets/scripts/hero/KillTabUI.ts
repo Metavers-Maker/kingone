@@ -24,8 +24,6 @@ export class KillTabUI extends Component {
             this.killListNode.removeAllChildren();
             let killsData:Map<string,CKillEnty> = CSkillMgr.inst().getKillsData();
             for(let item of killsData.values()){
-                console.log("KillTabUI killsData",killsData);
-                console.log("KillTabUI",item);
                 if(item){
                     let nodeItem = CResMgr.inst().createNode(item.prefab);
                     if(nodeItem){
@@ -36,7 +34,10 @@ export class KillTabUI extends Component {
                         }
                         let event:EventHandler= button.clickEvents[0];
                         let custom = item.uid;
+                        event.target = this.node; 
                         event.customEventData=custom;
+                        event.component = 'KillTabUI';// 这个是脚本类名
+                        event.handler = "onlcikItem";
                         this.killListNode.addChild(nodeItem);
                     }
                 }
