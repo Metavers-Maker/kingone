@@ -6,6 +6,7 @@
 import { CPlayer } from "./entity/CPlayer";
 import { CUser } from "./entity/CUser";
 import { CEquipMgr } from "./equip/CEquipMgr";
+import { CSkillMgr } from "./skill/CSkillMgr";
 
 export class CKingInst {
 
@@ -25,6 +26,7 @@ export class CKingInst {
     public init() {
         //
         CEquipMgr.inst().init();
+        CSkillMgr.inst().init();
         //
     }
 
